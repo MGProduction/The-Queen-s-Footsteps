@@ -1,4 +1,7 @@
 # The Queen's Footsteps - Part 1
+
+![alt text](extra/home.png)
+
 **StoryTllr64** port of **Davide Bucci**'s [text adventure masterpiece](https://github.com/DarwinNE/The-Queen-s-Footsteps) (written in [AWS](https://github.com/DarwinNE/aws2c))
 
 You can find other info about his game [here](http://davbucci.chez-alice.fr/index.php?argument=varie/queen/queen.inc&language=English)
