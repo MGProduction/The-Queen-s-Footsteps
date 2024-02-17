@@ -5,7 +5,7 @@ You can find other info about his game [here](http://davbucci.chez-alice.fr/inde
 
 ## About this conversion
 
-This conversion was possible because the original game has been released as **GPL 3.0**. I loved the original game, and I wanted not only to see how "solid" is my text-adventure little engine but also to really study Davide's work, to learn from one of his most famous works.
+This conversion was possible because the original game has been released as **GPL 3.0**. I loved the original game, and I wanted not only to see how "solid" is my text-adventure little [engine](https://github.com/MGProduction/StoryTllr) but also to really study Davide's work, to learn from one of his most famous works.
 
 ## Where are the other parts of this adventure?
 
