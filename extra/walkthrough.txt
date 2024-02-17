@@ -1,69 +1,69 @@
 take brochure
-s
-s
-x door
+south
+south
+examine door
 take grease
-d
+down
 talk to clerk
 read telegram
-s
-s
-w
+south
+south
+west
 talk to operator
-e
-n
-e
-e
-s
-x gate
-n
-w
-w
-w
-n
+east
+north
+east
+east
+south
+examine gate
+north
+west
+west
+west
+north
 talk employee
-s
-w
-n
-x office
+south
+west
+north
+examine office
 talk to officer
 take paper
-n
-n
+north
+north
 put brochure in door
-e
+east
 take quill
-x dustbin
+examine dustbin
 take sheet
-w
-s
-s
-s
-s
+west
+south
+south
+south
+south
 talk to clerk
-x sheet
-n
-e
-n
+examine sheet
+north
+east
+north
 give order to employee
-s
-w
-n
-n
-n
-n
-n
-e
-e
+south
+west
+north
+north
+north
+north
+north
+east
+east
 search 12
-w
-w
-s
-s
-s
-s
-e
-e
-n
+west
+west
+south
+south
+south
+south
+east
+east
+north
 talk clerk
 talk clerk
