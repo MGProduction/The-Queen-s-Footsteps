@@ -1,22 +1,20 @@
-# The-Queen-s-Footsteps
+# The Queen's Footsteps - Part 1
 **StoryTllr64** port of **Davide Bucci**'s [text adventure masterpiece](https://github.com/DarwinNE/The-Queen-s-Footsteps) (written in [AWS](https://github.com/DarwinNE/aws2c))
 
-(for the moment just PART 1 has been converted)
+You can find other info about his game [here](http://davbucci.chez-alice.fr/index.php?argument=varie/queen/queen.inc&language=English)
 
-## Reasons
+## About this conversion
 
-The main reason for this conversion, now possible because the original game has been released as GPL 3.0, is to see how "solid" is my text-adventure little engine. But another one is because that way I was able to "study" this masterpiece code, to understand better choices and style made by a much more brilliant author than I am. 
+This conversion was possible because the original game has been released as **GPL 3.0**. I loved the original game, and I wanted not only to see how "solid" is my text-adventure little [engine](https://github.com/MGProduction/StoryTllr) but also to really study Davide's work, to learn from one of his most famous works.
+
+## Where are the other parts of this adventure?
+
+I have no plans to port the other two parts - but from the original author's page, there are several versions of them (including a C64 one), of course done with his engine of choice. His license allows you to port even them in any other system you like (including mine, even if I'm aware that's a far-fetched possibility)
 
 ## Differences with the original one
 
-This is not, of course, the first time I have dealt with someone else code (there are several text-adventure games that are not open source), but this has been particularly challenging to study, considering that the original version uses a great, but not so common engine, that keeps the source code with id references, instead of names. I write that to state that I've done my best to recreate the original game with all its perks, but I could have missed something here and there. 
+The two script languages (mine and AWS) are quite different in several aspects, so there's a (I hope minimal) set of differences that just depends on the engines' features. Apart from that, and from the fact that I added graphics to locations, this game should be identical to the original one. I mean, you can follow Davide's walkthrough step by step and reach the end.
 
-But, not considering *errors*, there are other differences I've added that are of two kinds:
+## Licence
 
-- engine stylistic choices (for instance the the graphical elements, but other minor elements parser-related)
-- minor adjustment where in my opinion something was missing or odd. This is of course probably due to MY problems in understanding the original code
-
-It's possible anyway to follow the author's walkthrough from start to end
-
-
-
+The original game has been released as **GPL 3.0** - so this conversion follows the same route. You can do with game code (and gfx too) everything that's covered by that license.
