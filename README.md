@@ -6,6 +6,8 @@
 
 You can find other info about his game [here](http://davbucci.chez-alice.fr/index.php?argument=varie/queen/queen.inc&language=English)
 
+[This](https://marcogiorgini.itch.io/the-queens-footsteps-storytllr) is instead the official itch.io page of this port.
+
 ## About this conversion
 
 This conversion was possible because the original game has been released as **GPL 3.0**. I loved the original game, and I wanted not only to see how "solid" is my text-adventure little [engine](https://github.com/MGProduction/StoryTllr) but also to really study Davide's work, to learn from one of his most famous works.
