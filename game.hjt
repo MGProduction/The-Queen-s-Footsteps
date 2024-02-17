@@ -51,7 +51,7 @@ binary:yes
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-model:VGA
+model:C64
 2
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -273,7 +273,7 @@ ifobjin:sheet,$available
 	ifobjin:paper,$available
 		msg:It's a sort of puzzle, but you are good at those things: you used the gum paper to hold the pieces together and it works. The letter is now readable, and says "\gTurin, August 20, 1904. Dear Rovelli, 88 43 23...\w" and a series of numbers.
 		msg:It's a code! This sounds weird... 
-		msg:The letter is signed Grand Master followed a symbol with an \gO\w and a wavy sign, a sort of an S inside.
+		msg:The letter is signed Grand Master followed a symbol with an "\gO\w" and a wavy sign, a sort of an S inside.
 		put:letter,$inventory
 		put:sheet,$nowhere
 
@@ -845,7 +845,7 @@ $start
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\home.jpg
+image:png\start_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -878,7 +878,7 @@ introduction
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\introduction_detail.png
+image:png\introduction_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -895,6 +895,7 @@ msg:Today is August 27th, 1904.
 msg:Nine months ago, you, \yEmilia Vittorini\w, joined the Italian Archeological Expedition in Egypt led by Ernesto Schiaparelli, the director of the Egyptian Museum of Turin.
 msg:You are now back in Genoa, Italy: your steam ferry arrived three days ago with 25 wooden boxes containing Queen Nefertari Meritmut's grave goods, a real treasure! 
 msg:They left Genoa by train, heading towards Turin, yesterday evening. While they were in transit, you were invited to a sumptuous reception organised by a wealthy art lover, Eugenio Collovati, count of Raligotto, but it would be hard to say that you appreciated the evening.
+waitkey
 msg:But the reception was yesterday: now, you must catch the train to Turin and check that the treasure arrived safely.
 setvar:maxweight,100
 waitkey
@@ -908,7 +909,7 @@ end
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\end2.jpg
+image:png\end_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -918,14 +919,20 @@ onfirst
 clear
 msg:While you walk towards the Piazza Principe train station you think that there are strange things moving around this story and you are now more than ever determined to find the missing box. 
 msg:On another hand, you're happy to come home, to see your family. 
+waitkey
 msg:You catch your train and, rocked by the wagon movements, you rapidly fall asleep; your last thought was a pleasant one: you are going to see Democrito, your cat, real soon!
 waitkey
 clear
-msg:The first part of this game ends here.
-msg:If you want to know how the story goes on, you can load the second part of the game using one of the available original versions.
+msg:The first part of this game \yends here\w.
+msg:If you want to know how the story goes on, you can load the second part of the game using one of the available original versions from \yDavide Bucci\w itch.io page.
 msg:In that case, use #SHIBBOLETH #FANFALUCH to access it.
 waitkey
-quit
+msg:Do you want to restart?
+getkey
+ifkey:Y
+	start
+else
+	quit
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -940,7 +947,7 @@ hotelroom
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\hotelroom2.png
+image:png\hotelroom_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1155,7 +1162,7 @@ name:Hallway
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\hallway4.png
+image:png\hallway_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1256,7 +1263,7 @@ name:Elevator
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\elevatorinterior.png
+image:png\elevator_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1387,7 +1394,7 @@ name:Hotel reception
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\hotelreception2.jpg
+image:png\hotelreception_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1492,6 +1499,7 @@ if:telegramsent
 		addvar:clues,1
 	endif
 	if:clues=2
+		setvar:tmp,1
 		if:investigateonhim
 			msg:You buy train tickets to Turin and thank the clerk. 
 			goto:end
@@ -1604,7 +1612,7 @@ name:Archive building
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\cityarchive.jpg
+image:png\archivebuilding_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1695,7 +1703,7 @@ name:Archives
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\archiveinterior.jpg
+image:png\archives_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1842,7 +1850,7 @@ name:Emporium
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\emporium.jpg
+image:png\emporium_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1972,7 +1980,7 @@ name:Palazzo Ducale
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\palazzoducale.jpg
+image:png\palazzoducale_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2177,7 +2185,7 @@ name:Piazza Acquaverde
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\piazzaacquaverde_col.png
+image:png\piazzaacquaverde_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2319,7 +2327,7 @@ name:Piazza Deferrari
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\piazzadeferrari2_col.png
+image:png\piazzadeferrari_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2406,7 +2414,7 @@ name:Piazza Manin
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\piazzamanin_col.png
+image:png\piazzamanin_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2517,7 +2525,7 @@ name:Piazza Principe station
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\piazzaprincipedet_col.png
+image:png\piazzaprincipestation_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2587,7 +2595,7 @@ name:Porto Franco
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\portofranco3.png
+image:png\portofranco_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2705,7 +2713,7 @@ name:Via Assarotti
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\viaassarotti2_col.png
+image:png\viaassarotti_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2767,7 +2775,7 @@ name:Via Roma
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\viaroma6.png
+image:png\viaroma_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2872,7 +2880,7 @@ villaraligotto
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\villaraligotto.png
+image:png\villaraligotto_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2995,7 +3003,7 @@ name:Customs
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\customs.jpg
+image:png\customs_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3050,7 +3058,7 @@ name:Darsena
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\darsena.png
+image:png\darsena_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3105,7 +3113,7 @@ name:Harbour Authority
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\harborauthority.jpg
+image:png\harbourauthority_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3263,7 +3271,7 @@ name:Harbour Storage
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\harbourstorage2.jpg
+image:png\harbourstorage_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3410,7 +3418,7 @@ name:Office
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png\officebox.jpg
+image:png\office_C64.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text

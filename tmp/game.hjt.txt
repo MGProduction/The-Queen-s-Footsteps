@@ -1,0 +1,883 @@
+config
+	name:QueensFootsteps
+	title:The Queen's Footsteps
+	originalauthor:Davide Bucci
+	author:Marco Giorgini
+	engine:StoryTllrC64
+	version:1.1.1
+	licence:GPL-3.0
+	binary:yes
+	model:C64
+	image
+		rborder:1
+		hborder:8
+		splity:96
+		imgborder:png/border2.png
+include:stdlib.hjt
+verb:break
+	syn:break,destroy
+verb:bye
+verb:downstairs
+verb:drive
+	syn:drive,enter
+verb:drop
+	withobj:money
+		msg:No reason to do that.
+	withobj:paper
+		ifobjin:headedpaper,$available
+			msg:No reason to do that.
+verb:eat
+	msg:No need to do that now.
+	syn:eat,swallow,drink
+verb:fill
+verb:fuck
+	msg:Please feel free to continue, if you wish to... I've become immunised to swearing and profanity a long time ago.
+	syn:fuck,curse,piss
+verb:help
+	msg:This is a text adventure game. Read descriptions carefully and type commands such as #examine #bed. Type #north, #south, ... to move in the desired direction.
+	msg:Abbreviations are possible #x for #examine, #l to look (i.e. describe your current location again), #i for #inventory, #n for #north and so on.
+	msg:To quit the game, type #bye. To restart it, type #restart.
+	syn:help,info,about
+verb:knock
+verb:move
+	syn:move,lift
+verb:open
+	withobj:window
+		msg:No need to do that now.
+verb:pet
+	msg:No need to do that now.
+	syn:pet,caress,kiss,touch
+verb:pick
+verb:play
+verb:pray
+	msg:You may try that, but it will probably not work.
+verb:push
+	syn:push,pull
+verb:quit
+	msg:Use 'bye' if you want to stop playing.
+	syn:quit,exit
+verb:repair
+	withobj:sheet
+		ifobjin:sheet,$available
+			ifobjin:paper,$available
+				msg:It's a sort of puzzle, but you are good at those things: you used the gum paper to hold the pieces together and it works. The letter is now readable, and says "\gTurin, August 20, 1904. Dear Rovelli, 88 43 23...\w" and a series of numbers.
+				msg:It's a code! This sounds weird... 
+				msg:The letter is signed Grand Master followed a symbol with an "\gO\w" and a wavy sign, a sort of an S inside.
+				put:letter,$inventory
+				put:sheet,$nowhere
+verb:run
+	syn:run,go,walk
+verb:shibboleth
+verb:show
+verb:sit
+	msg:No. You aren't tired, now.
+	syn:sit,sleep
+verb:smell
+	msg:You don't smell anything in particular, apart from a barely perceptible scent of lavender, coming from your clothes.
+verb:turn
+verb:unwear
+	syn:unwear,undress
+verb:use
+	syn:use,press,activate
+	withobj:$every
+		msg:Try a more specific action.
+verb:wash
+	msg:No need to do that now.
+verb:wear
+	syn:wear,dress
+verb:write
+	ifobjin:headedpaper,$available
+		ifobjin:quill,$available
+			msg:You write an elegantly handwritten note on the stamped headed paper, saying that you are authorized to access reserved information in the archives such as the attribution of license plates. With a flourish you add several fake signatures.
+			put:headedpaper,$nowhere
+			put:order,$inventory
+		endif
+	else
+		if:bitDG
+			msg:You'd need something to write on...
+		else
+			msg:You'd need something to write...
+verb:x
+	withobj:me
+		msg:You'll examine yourself much better with a mirror.
+verb:xyzzy
+	msg:You have a strange sensation, almost as if you were becoming lighter and lighter. After a while, everything becomes normal, again.
+normalobj:quill
+	name:a #quill and an inkwell
+	syn:quill,inkwell
+	startat:office
+	verb:take
+		ifobjin:quill,$available
+			ifobjin:headedpaper,$available
+				msg:You write an elegantly handwritten note on the stamped headed paper, saying that you are authorized to access reserved information in the archives such as the attribution of license plates. With a flourish you add several fake signatures.
+				put:headedpaper,$nowhere
+				put:order,$inventory
+			else	
+				msg:No. That would spill ink everywhere!
+	verb:x
+		ifobjin:quill,$available
+			msg:It's a goose quill and a moderate quantity of blue ink.
+normalobj:brochure
+	name:a #brochure
+	desc:A hotel #brochure
+	syn:brochure,cardboard
+	startat:hotelroom
+	verb:x
+		ifobjin:brochure,$available
+			if:greasedbrochure
+				msg:It's now greasy and slippery.
+			else
+				msg:It's a description of the various services offered by the Grand Hotel Isotta on a small piece of cardboard, relatively rigid. It's truly a luxurious hotel! You can even buy train tickets there. Raligotto generously paid for your room.
+normalobj:money
+	name:some #money
+	desc:A small quantity of money
+	startat:$inventory
+	verb:give
+		msg:No, use them to buy things, instead.
+normalobj:grease
+	name:a little bit of #grease
+	verb:x
+		ifobjin:grease,$available
+			msg:Someone from maintenance was a little overzealous greasing the door!
+normalobj:telegram
+	name:a #telegram
+	verb:x
+		ifobjin:telegram,$available
+				msg:It's an urgent telegram from Schiaparelli, the director of the Egyptian Museum. He is in Turin, now: "\gTRAIN ARRIVED STOP ONE BOX MISSING STOP QUEENS SANDALS STOP.\w" 
+				msg:You almost scream while reading this: a box has been stolen! You feel angry: you
+				msg:knew that you shouldn't have gone to that stupid reception and should have stayed with the boxes! You decide to remain in Genoa for the moment, trying to understand what happened.
+				set:telegramread
+				set:telegramforcar
+normalobj:sheet
+	name:a torn #sheet
+	syn:sheet,pieces
+	verb:x
+		ifobjin:sheet,$available
+			ifobjin:paper,$available
+				msg:It's a sort of puzzle, but you are good at those things: you used the gum paper to hold the pieces together and it works. 
+				msg:The letter is now readable, and says "\gTurin, August 20, 1904. Dear Rovelli, 88 43 23...\w" and a series of numbers.
+				msg:It's a code! This sounds weird... 
+				msg:The letter is signed Grand Master followed a symbol with an \gO\w and a wavy sign, a sort of an S inside.
+				put:letter,$inventory
+				put:sheet,$nowhere
+			else
+				msg:The sheet is torn in small pieces. You may recompose it but you need something to keep them together.
+normalobj:stamp
+	name:official #stamp
+	verb:take
+		ifobjin:stamp,$available
+			ifobjin:harbourauthority.officer,$available
+				msg:You can't touch it while the officer is present!
+			else
+				ifobjin:headedpaper,$inventory
+					msg:You already have headed paper
+				else
+					put:headedpaper,$inventory
+					msg:You rapidly take a sheet of headed paper and stamp it twice. That will do. You still have to write something on it, but you will do that later.
+					set:gotorderidea
+normalobj:headedpaper
+	name:headed #paper, with stamps
+	syn:paper,headed paper
+	verb:use
+		ifobjin:quill,$available
+			ifobjin:headedpaper,$available
+				msg:You write an elegantly handwritten note on the stamped headed paper, saying that you are authorized to access reserved information in the archives such as the attribution of license plates. With a flourish you add several fake signatures.
+				put:headedpaper,$nowhere
+				put:order,$inventory
+	verb:take
+		ifobjin:headedpaper,$available
+			ifobjin:harbourauthority.officer,$available
+				msg:You can't touch it while the officer is present!
+			else
+				ifobjin:headedpaper,$inventory
+					msg:You already have headed paper
+				else
+					put:headedpaper,$inventory
+					msg:You rapidly take a sheet of headed paper and stamp it twice. That will do. You still have to write something on it, but you will do that later.
+					set:gotorderidea
+	verb:x
+		ifobjin:headedpaper,$available
+			msg:You'd need something to write...
+normalobj:card
+	name:an address #card
+	desc:Address card
+	verb:x
+		ifobjin:card,$available
+			msg:It reads "\gGE240 Rovelli Antonio, P.za Acquaverde 12.\w" It is worth a visit...
+normalobj:paper
+	name:gum #paper
+	syn:paper,gum paper
+	verb:use
+		ifobjin:paper,$available
+			ifobjin:sheet,$available
+				msg:It's a sort of puzzle, but you are good at those things: you used the gum paper to hold the pieces together and it works.
+				msg:The letter is now readable, and says "\gTurin, August 20, 1904. Dear Rovelli, 88 43 23...\w" and a series of numbers.
+				msg:It's a code! This sounds weird...
+				msg:The letter is signed Grand Master followed a symbol with an \gO\w and a wavy sign, a sort of an S inside.
+				put:letter,$inventory
+				put:sheet,$nowhere
+normalobj:letter
+	name:a recomposed #letter
+	verb:x
+		ifobjin:letter,$available
+			msg:It's a sort of puzzle, but you are good at those things: you used the gum paper to hold the pieces together and it works. 
+			msg:The letter is now readable, and says "\gTurin, August 20, 1904. Dear Rovelli, 88 43 23...\w" and a series of numbers.
+			msg:It's a code! This sounds weird... 
+			msg:The letter is signed Grand Master followed a symbol with an \gO\w and a wavy sign, a sort of an S inside.
+			if:symbolseen
+				msg:You have already seen that symbol! On the gate of Raligotto's villa. 
+				msg:Maybe there is a connection: you should find someone that can help you decipher the letter!
+normalobj:order
+	name:a falsified #order
+	verb:x
+		ifobjin:order,$available
+			msg:It looks official!
+	verb:give
+		withobj:archives.employee
+			ifobjin:archives.employee,$available
+				ifobjin:order,$available
+					msg:The employee takes the order and examines it carefully...
+					msg:"\gWell... it seems that everything is in order.\w" 
+					msg:He goes away and comes back with a register: it's the list of the registered car plates in Genoa.
+					msg:You have a look at it... it was GE240 or GE340. 
+					msg:It's easy: GE340 is not attributed yet: GE240 Rovelli Antonio, P.za Acquaverde 12. 
+					msg:The employee writes the address on a card that he gives to you.
+					set:addressknown
+					put:card,$inventory
+room:$start
+	image:png\start_C64.png
+	onfirst
+		clear
+		msg:\c##SUBTITLE##
+			\c
+			\cOriginal \yAWS\w Game by
+			\c\y##ORIGINALAUTHOR##\w
+			\c
+			\c\yStoryTllrC64\w release 
+			\cby \y##AUTHOR##\w
+			\c
+			\c\gGPL-3.0 license\w
+		waitkey
+		goto:introduction
+	name:The Queen's Footsteps - Part I
+room:introduction
+	image:png\introduction_C64.png
+	name:Introduction
+	onfirst
+		clear
+		msg:Today is August 27th, 1904.
+		msg:Nine months ago, you, \yEmilia Vittorini\w, joined the Italian Archeological Expedition in Egypt led by Ernesto Schiaparelli, the director of the Egyptian Museum of Turin.
+		msg:You are now back in Genoa, Italy: your steam ferry arrived three days ago with 25 wooden boxes containing Queen Nefertari Meritmut's grave goods, a real treasure! 
+		msg:They left Genoa by train, heading towards Turin, yesterday evening. While they were in transit, you were invited to a sumptuous reception organised by a wealthy art lover, Eugenio Collovati, count of Raligotto, but it would be hard to say that you appreciated the evening.
+		waitkey
+		msg:But the reception was yesterday: now, you must catch the train to Turin and check that the treasure arrived safely.
+		setvar:maxweight,100
+		waitkey
+		goto:hotelroom
+room:end
+	image:png\end_C64.png
+	onfirst
+		clear
+		msg:While you walk towards the Piazza Principe train station you think that there are strange things moving around this story and you are now more than ever determined to find the missing box. 
+		msg:On another hand, you're happy to come home, to see your family. 
+		waitkey
+		msg:You catch your train and, rocked by the wagon movements, you rapidly fall asleep; your last thought was a pleasant one: you are going to see Democrito, your cat, real soon!
+		waitkey
+		clear
+		msg:The first part of this game \yends here\w.
+		msg:If you want to know how the story goes on, you can load the second part of the game using one of the available original versions from \yDavide Bucci\w itch.io page.
+		msg:In that case, use #SHIBBOLETH #FANFALUCH to access it.
+		waitkey
+		msg:Do you want to restart?
+		getkey
+		ifkey:Y
+			start
+		else
+			quit
+hotel
+room:hotelroom
+	image:png\hotelroom_C64.png
+	name:Hotel room
+	attr.shortdesc:in an elegantly decorated room
+	attr.exits:south
+	desc:You are in an elegantly decorated room. The bed is unmade as you slept there last night. A cast iron radiator is on the west wall and a gas chandelier hangs from the white ceiling. The walls of the room are covered by tapestries with flowery patterns painted in delicate colours; a wool carpet covers the floor. A washbowl and a pitcher containing water are placed in front of a large mirror to the north. A gentle morning light spills through a window to the east.
+	verb:s
+		goto:hallway
+	scenery:mirror
+		verb:x
+			msg:In the mirror you see a young woman, about 5 ft 6 in tall, with blue eyes. That's you. Nine months under the Egyptian sun working at the excavation left a nice tan on your skin. Your hair, naturally red-brownish, became almost blonde.
+	scenery:bed
+		verb:make
+			msg:No. You are leaving your room. The sheets will be changed anyway.
+		verb:use
+			msg:No. You aren't tired, now.
+		verb:x
+			msg:Certainly, it was a very comfortable bed.
+	scenery:windows
+		verb:x
+			msg:You see Via Roma, in Genoa, outside.
+	scenery:tapestry
+		verb:x
+			msg:Flowers and laurel leaves: decorative, indeed!
+	scenery:radiator
+		verb:x
+			msg:It's a modern cast-iron radiator, with thin feet and ornate geometric patterns. It's cool now, as it's summer.
+	scenery:washbowl
+		verb:use
+			msg:You already washed yourself and you are now wearing your clothes.
+		verb:x
+			msg:Everything you need for your morning toilette.
+	scenery:burner
+		verb:x
+			msg:It has five burners, decorated with brass laurel leaves. Now it's off, but yesterday evening you noticed the light coming from the thorium mantles was particularly bright.
+	scenery:light
+		verb:x
+			msg:You turn your face towards the sun, closing your eyes. You can feel its gentle warmth on your skin.
+room:hallway
+	name:Hallway
+	image:png\hallway_C64.png
+	attr.shortdesc:in a hallway
+	attr.exits:north, south
+	desc:You are in a hallway. Walls are wood panelled and your steps are almost silent as you walk on a thick and soft carpet of a dark Bordeaux colour. A single gas burner struggles against the dark and you cast a long shadow on the floor.
+	verb:n
+		goto:hotelroom
+	verb:s
+		goto:elevator
+	verb:smell
+		msg:There's a faint metallic odour mixed with the familiar smell of the gas burning.
+	scenery:panels
+		verb:x
+			msg:It's walnut hardwood.
+	scenery:burner
+		verb:x
+			msg:It does not produce much light.
+room:elevator
+	name:Elevator
+	image:png\elevator_C64.png
+	attr.shortdesc:in a hydraulic elevator
+	attr.exits:north, down
+	desc:You are in a hydraulic elevator, closed by a finely decorated metal door. There is a curious smell: you'd say that the mechanism has been lubricated recently or it leaks fluid, somewhere. A polished panel with buttons permits you to go down, to the first floor.
+	verb:n
+		goto:hallway
+	verb:d
+		goto:hotelreception
+	verb:smell
+		msg:From the smell only, you can't recognise if it's lubricating oil or hydraulic fluid.
+	scenery:buttons
+		verb:x
+			msg:Brassy!
+		verb:press
+			goto:hotelreception
+	scenery:door
+		verb:x
+			msg:The door mechanism oozes a little bit of grease.
+			put:grease,$here
+	scenery:grease
+		verb:take
+			ifobjin:brochure,$available
+				msg:You use the brochure to take a little bit of grease from the floor, close to the door.
+				set:greasedbrochure
+				put:grease,$nowhere
+			else
+				msg:You can't take the grease with your bare hands. That would be very messy!
+room:hotelreception
+	name:Hotel reception
+	image:png\hotelreception_C64.png
+	desc:You are at the reception of the Grand Hotel Isotta. A panel informs you that you can buy train tickets here. A hydraulic elevator nearby leads to the upper floors, where the rooms for guests are located. Large windows allow a beautiful view of Via Roma and let the morning light shine gently through white taffeta curtains. This place is cosy and decorated with taste.
+	attr.exits:south, up
+	attr.shortdesc:at the reception of the Grand Hotel Isotta
+	verb:s
+		goto:viaroma
+	verb:u
+		goto:elevator
+	verb:buy
+		msg:Talk to the clerk.
+	actor:clerk
+		name:the hotel #clerk
+		desc:The hotel clerk is a young man, relatively tall, smiling in a professional way.
+		verb:thank
+			msg:"\gMy pleasure, Madam.\w"
+		verb:talk
+			setvar:tmp,0
+			if:telegramsent
+				if:!receivedsecondtelegram
+					setvar:tmp,1
+					set:receivedsecondtelegram
+					msg:The clerk waves a hand, saying: "\gMa'am, you received an urgent telegram!\w" and gives it to you.
+					msg:You read it immediately: Schiaparelli answered your message with "\gFIND ROVELLI STOP CHIEF OF FREIGHT TRAIN TRANSFER COMPANY STOP\w".
+					set:receivedsecondtelegram
+				endif
+				setvar:clues,0
+				if:stridein
+					addvar:clues,1
+				endif
+				if:symbolseen
+					addvar:clues,1
+				endif
+				if:clues=2
+					setvar:tmp,1
+					if:investigateonhim
+						msg:You buy train tickets to Turin and thank the clerk. 
+						goto:end
+					else
+						msg:You stop and think... there are a few things that point towards a certain Rovelli: 
+						msg:Schiaparelli's message, the coded letter and the plate of the car that tried to run you over. 
+						msg:That can't be a coincidence. Rovelli is now in Turin, apparently. You must find out who the Grand Master is and what that strange symbol means. 
+						msg:You can probably find someone in Turin that can decipher the letter. You decide to go there as soon as possible!
+						set:investigateonhim
+				endif
+			endif
+			if:tmp=0
+				if:!receivedtelegram
+					msg:The clerk smiles and asks your name. When you respond, he says "\gMadam, we received a telegram for you this morning. Here it is.\w"
+					msg:You thank him politely and put the telegram in your pocket.
+					set:receivedtelegram
+					put:telegram,$inventory
+				else
+					msg:"\gYour room is already fully paid up, Madam.\w" That's true, Raligotto insisted on paying for one of the best hotels in the city for you.
+	scenery:windows
+		verb:x
+			msg:You see Via Roma, in Genoa, outside.
+	scenery:curtains
+		verb:x
+			msg:They're clean.
+	scenery:panels
+		verb:x
+			msg:Train tickets available: Turin La Spezia, Pisa (P.za Principe) special trains for Chiavari (P.za Brignole)
+	scenery:elevator
+		verb:x
+			msg:It's a modern, efficient, hydraulic elevator. The steam engine that pressurises the fluid must be in the back yard.
+town
+room:archivebuilding
+	name:Archive building
+	image:png\archivebuilding_C64.png
+	desc:You are standing in front of the building hosting the administrative archive of the city of Genoa.
+	attr.shortdesc:near the city archive
+	attr.exits:north, south, east, west
+	verb:n
+		goto:archives
+	verb:s
+		goto:palazzoducale
+	verb:e
+		goto:viaroma
+	verb:w
+		goto:portofranco
+	scenery:building
+		verb:x
+			msg:It's a large brick palace, built during the Middle Ages.
+room:archives
+	name:Archives
+	image:png\archives_C64.png
+	desc:You are inside the city archive. It is an administrative building, not really open to the general public.
+	attr.shortdesc:inside the city archive
+	attr.exits:south
+	verb:s
+		goto:archivebuilding
+	verb:give
+	verb:withobj:order
+		withobj:employee
+			ifobjin:employee,$available
+				ifobjin:order,$available
+					msg:The employee takes the order and examines it carefully...
+					msg:"\gWell... it seems that everything is in order.\w" 
+					msg:He goes away and comes back with a register: it's the list of the registered car plates in Genoa.
+					msg:You have a look at it... it was GE240 or GE340. 
+					msg:It's easy: GE340 is not attributed yet: GE240 Rovelli Antonio, P.za Acquaverde 12. 
+					msg:The employee writes the address on a card that he gives to you.
+					set:addressknown
+					put:card,$inventory
+	actor:employee
+		name:an Archives #employee
+		desc:The employee must be more or less your age, but has an unpleasant expression on his face.
+		syn:employee,man
+		verb:talk
+			if:!seencar
+				msg:No need to do that now.
+			else
+				ifobjin:order,$available
+				else
+					msg:You approach the man and ask him about the plate of the car that almost ran you down: 
+					msg:"\gI couldn't possibly tell you that, young lady! We can't just give out information like that to anybody that walks in here. We need an official order for that!\w"
+					msg:I will not describe what you think: the game would be rated adult-only...
+					set:harbouridea
+		verb:give
+			withobj:order
+				ifobjin:employee,$available
+					ifobjin:order,$available
+						msg:The employee takes the order and examines it carefully...
+						msg:"\gWell... it seems that everything is in order.\w" 
+						msg:He goes away and comes back with a register: it's the list of the registered car plates in Genoa.
+						msg:You have a look at it... it was GE240 or GE340. 
+						msg:It's easy: GE340 is not attributed yet: GE240 Rovelli Antonio, P.za Acquaverde 12. 
+						msg:The employee writes the address on a card that he gives to you.
+						set:addressknown
+						put:card,$inventory
+room:emporium
+	name:Emporium
+	image:png\emporium_C64.png
+	desc:You are in a cramped store, full of all kinds of tools and stationery for sale.
+	attr.shortdesc:in a cramped store
+	attr.exits:north
+	verb:n
+		goto:portofranco
+	verb:buy
+		msg:Talk with the clerk to buy things.
+	actor:clerk
+		name:the Emporium #clerk
+		desc:The emporium clerk is a thin old lady with white hair and a lively stare. She has probably worked here for the last 50 years.
+		verb:talk
+			if:sheetfound
+				if:!gotgumpaper
+					msg:You ask the clerk if she has something to hold together pieces of paper. She searches in a box and after a while she hands you a roll of gum paper. It cost 10 cents.
+					put:paper,$inventory
+					set:gotgumpaper
+				endif
+			else
+				ifobjin:headedpaper,$available
+					msg:You discuss with the clerk: you ask for something to write, but she only has black ink and you know the one used in official orders is blue. You will have to find it elsewhere!
+				else
+					msg:No need to do that now.
+				endif
+			endif
+		verb:thank
+			msg:"\gMy pleasure, Madam.\w"
+	scenery:money
+		verb:give
+			msg:Talk with the clerk to buy things.
+room:palazzoducale
+	name:Palazzo Ducale
+	image:png\palazzoducale_C64.png
+	desc:You are in one of the most important telegraph stations of the city of Genoa, hosted in this splendid palace. You see a classic receiver station installed behind a desk: a telegraphic receiver with a roll of paper activated by a spring, a selector with brass plugs and a telegraphic key. You can read the manufacturer's mark "\gBalocco & Ghioni, Genoa.\w" Those things fascinate you.
+	attr.exits:north, east
+	verb:n
+		goto:archivebuilding
+	verb:e
+		goto:piazzadeferrari
+	actor:operator
+		name:the telegraph #operator
+		desc:The telegraph operator is an approximately 40 year old lady, dressed in the uniform of the Italian Royal Mail.
+		verb:talk
+			if:!telegramsent
+				if:telegramread
+					msg:You send an urgent telegram to Schiaparelli "\gALL BOXES PRESENT IN FERRY STOP MAYBE STOLEN FROM TRAIN STOP I INVESTIGATE STOP\w", that's three one-lira silver pieces. 
+					msg:The operator then sits at the telegraphic station, puts her hand on the Forcieri key mechanism and starts tapping. She returns to say that the message has been sent.
+					set:telegramsent
+					setvar:varEB,10
+				endif
+			else
+				msg:No need to do that now.
+			endif
+		verb:thank
+			msg:"\gMy pleasure, Madam.\w"
+	scenery:receiver
+		verb:x
+			msg:The receiver writes dots and dashes on a long ribbon of paper.
+	scenery:key
+		verb:x
+			msg:The key is a switch that closes a circuit, allowing the telegraph to work.
+	scenery:selector
+		verb:x
+			msg:The selector allows the operator to connect or disconnect the receiver and the key, or even to ground the line, by moving the brass plugs.
+	scenery:plug
+		verb:x
+			msg:Those are simple plugs, an inch long, used in the selector.
+	scenery:paper
+		verb:x
+			msg:It's a long paper ribbon. On one side of the receiver it is blank, neatly rolled into a reel. On the other side it is collected into a bin and it is covered by dots and dashes traced with a purple ink.
+	scenery:dossiers
+		verb:x
+			msg:It's an ordinary desk, meant to receive clients.
+room:piazzaacquaverde
+	name:Piazza Acquaverde
+	image:png\piazzaacquaverde_C64.png
+	desc:You are in a large square, just in front of the train station. There is a monument dedicated to Christopher Columbus in the square, surrounded by a nice garden. The square is bounded on all sides by a number of large houses.
+	attr.exits:west
+	scenery:building
+		verb:x
+			msg:Large houses and building are around the place, they have a number on a plate.
+	scenery:twelve
+		syn:twelve,12
+		verb:x
+			if:addressknown
+				set:stridein
+				msg:You find number 12 and stride in. There is a doorman and you ask him cautiously about Rovelli: 
+				msg:"\gHe's not here! I saw him leaving hurriedly two hours ago, saying he had to go to Turin.\w"
+				msg:You thank him and exit the building. So... Rovelli is going to Turin?
+		verb:run
+			if:addressknown
+				if:!stridein
+					set:stridein
+					msg:You find number 12 and stride in. There is a doorman and you ask him cautiously about Rovelli: 
+					msg:"\gHe's not here! I saw him leaving hurriedly two hours ago, saying he had to go to Turin.\w"
+					msg:You thank him and exit the building. So... Rovelli is going to Turin?
+	scenery:statue
+		verb:x
+			msg:It's a tall column, with a statue of Christopher Columbus on the top, pointing towards the sea with his hand.
+	scenery:garden
+		verb:x
+			msg:Flowery!
+	verb:w
+		goto:piazzaprincipestation
+	verb:x
+		msg:No need to do that now.
+room:piazzadeferrari
+	name:Piazza Deferrari
+	image:png\piazzadeferrari_C64.png
+	desc:You are in a large square, surrounded by tall buildings. There is a tall equestrian statue in the north part of the square.
+	attr.exits:north, west
+	verb:n
+		goto:viaroma
+	verb:w
+		goto:palazzoducale
+	scenery:building
+		verb:x
+			msg:Many of the buildings are occupied by banks. Economic activities are common, here!
+	scenery:statue
+		verb:x
+			msg:It represents Giuseppe Garibaldi, riding a horse.
+room:piazzamanin
+	name:Piazza Manin
+	image:png\piazzamanin_C64.png
+	desc:You are in a relatively large elevated square, paved with stones and crossed by the tramway rails. You are standing in the shade of large trees and a gentle breeze carries you the smell of the sea.
+	attr.exits:south, west
+	verb:s
+		goto:villaraligotto
+	verb:w
+		goto:viaassarotti
+	verb:smell
+		msg:The air smells of iodine and salt, with a faint fishy undertone. You breathe it in voluptuously.
+	scenery:tree
+		verb:x
+			msg:Those are horse chestnuts.
+	scenery:tram
+		verb:x
+			msg:Many lines of the steam tramway pass through here.
+	scenery:stone
+		verb:x
+			msg:The square is paved with porphyry stones.
+room:piazzaprincipestation
+	name:Piazza Principe station
+	image:png\piazzaprincipestation_C64.png
+	desc:You are in a large railway station. Strategically placed close to the harbour, it's a large building with a neo-classical facade.
+	attr.exits:east, west
+	verb:e
+		goto:piazzaacquaverde
+	verb:w
+		goto:customs
+	scenery:facade
+		verb:x
+			msg:It's a large facade with an arch supported by six columns. Marble statues decorate it.
+room:portofranco
+	name:Porto Franco
+	image:png\portofranco_C64.png
+	desc:You are close to the Porto Franco, at the beginning of Sottoripa Arcade. Booths and small stores sell a variety of things, from fried chickpea bread to spices coming from far-off lands. Closest to you, there is an emporium.
+	attr.exits:north, south, east
+	verb:n
+		goto:harbourauthority
+	verb:s
+		goto:emporium
+	verb:e
+		goto:archivebuilding
+	verb:smell
+		msg:This place has an interesting smell that mixes salty air with cinnamon, fish, coffee and chickpea bread (by the way, you tasted it when you first arrived in Genoa and you really loved it).
+	scenery:booths
+		verb:x
+			msg:The booths sell fish and street food, as well as spices. You are not hungry, now.
+	scenery:store
+		verb:x
+			msg:They sell many things, rather uninteresting for you. However, you notice a small emporium to the south.
+	scenery:porch
+		verb:x
+			msg:For sure, it's a long porch!.
+room:viaassarotti
+	name:Via Assarotti
+	image:png\viaassarotti_C64.png
+	onturn
+		if:telegramforcar
+			if:!seencar
+				unset:telegramforcar
+				set:seencar
+				msg:While you're walking down the street, you hear a car approaching rapidly behind you. 
+				msg:Your reflexes make you swiftly jump to one side and you avoid it, barely. The car speeds away from you. 
+				msg:While you feel your heart pounding, you say to yourself that it's better to stay alert: you are not sure this was an accident.
+				msg:You read the plate though: it was something similar to GE240 or GE340.
+	desc:You are in a long and straight avenue that climbs quite steeply going towards the east.
+	attr.exits:east, west
+	verb:e
+		goto:piazzamanin
+	verb:w
+		goto:viaroma
+room:viaroma
+	name:Via Roma
+	image:png\viaroma_C64.png
+	desc:You are in an important avenue of the city centre of Genoa. Elegant buildings host luxury shops and a steam tramway line passes here.
+	attr.exits:north, south, east, west
+	verb:n
+		goto:hotelreception
+	verb:s
+		if:!telegramread
+			msg:No need to wander in the city; you're not here as a tourist. Better stay close to the hotel.
+		else
+			goto:piazzadeferrari
+	verb:e
+		if:!telegramread
+			msg:No need to wander in the city; you're not here as a tourist. Better stay close to the hotel.
+		else
+			goto:viaassarotti
+	verb:w
+		if:!telegramread
+			msg:No need to wander in the city; you're not here as a tourist. Better stay close to the hotel.
+		else
+			goto:archivebuilding
+	scenery:building
+		verb:x
+			msg:The shops mainly sell luxury items: not relevant for what you're trying to do.
+	scenery:tram
+		verb:x
+			msg:A modern steam tramway passes here every 10 minutes.
+room:villaraligotto
+	image:png\villaraligotto_C64.png
+	name:Villa Raligotto
+	attr.exits:north
+	attr.shortdesc:near the the entrance gate of a villa
+	desc:You are standing before the entrance gate of the park of a beautiful villa built in the sixteenth century. You were here yesterday evening, at a reception by Eugenio Collovati, count of Raligotto. There's a handle that can be pulled to ring a bell in the villa.
+	verb:n
+		goto:piazzamanin
+	scenery:gate
+		verb:x
+			msg:It's a large wrought-iron gate, topped with polished brass decorations. 
+			msg:On one of them, you see a strange symbol composed of a stretched oval, a sort of an "\gO\w" with a wavy line placed diagonally from top left to bottom right.
+			set:symbolseen
+	scenery:handle
+		verb:push
+			msg:You hear a faint ringing sound, yet nobody comes to the gate.
+		verb:x
+			msg:There is a pressurised air line that goes towards the villa. When you pull the handle you vent it, the pressure drops and this rings the bell by letting a small hammer fall on it. You saw the mechanism yesterday evening.
+	scenery:tree
+		verb:x
+			msg:Raligotto in person made you visit his park yesterday evening. The park was beautiful, but your host was pompous and vacuous.
+port
+room:customs
+	name:Customs
+	image:png\customs_C64.png
+	desc:You are in the customs' office. You spent a lot of time here yesterday morning.
+	attr.shortdesc:in the customs' office
+	attr.exits:south, east
+	verb:s
+		goto:harbourstorage
+	verb:e
+		goto:piazzaprincipestation
+room:darsena
+	name:Darsena
+	image:png\darsena_C64.png
+	attr.shortdesc:at the harbour's shipyard
+	attr.exits:north, south
+	desc:You are at the harbour's shipyard.
+	verb:n
+		goto:harbourstorage
+	verb:s
+		goto:harbourauthority
+room:harbourauthority
+	name:Harbour Authority
+	image:png\harbourauthority_C64.png
+	desc:You are in the Harbour Authority building, a stone's throw from the harbour. The front office (a simple table) is now open.
+	onturn
+		if:officetimer>0
+			decvar:officetimer,1
+			if:officetimer=0
+				put:officer,$here
+				msg:The harbour officer has come back and says "\gMadam, your ferry berthed here at the harbour on August 24, at 17:32 precisely.\w" You thank him, smiling.
+	attr.exits:north, south
+	verb:n
+		goto:darsena
+	verb:s
+		goto:portofranco
+	verb:take
+		withobj:paper
+			ifobjin:officer,$available
+				msg:You can't touch it while the officer is present!
+		withobj:stamp
+			ifobjin:officer,$available
+				msg:You can't touch it while the officer is present!
+	actor:officer
+		name:an Harbour #officer
+		verb:talk
+			if:harbourideasaid
+				if:!gotorderidea
+					msg:Thinking fast, you say: "\gGood morning, sir, I am looking for the exact arrival time of the ferry Rivania on which I came here two days ago.\w 
+					msg:\gI would like to insure some goods and my insurance needs it. Could you please look it up for me?\w" 
+					msg:The officer pompously says to wait a few minutes and goes searching in the archives. You need to move fast!
+					setvar:officetimer,5
+					set:bitEJ
+					put:officer,$nowhere
+					put:headedpaper,$here
+					put:stamp,$here
+				endif
+			else
+				msg:Find something to say, first...
+		verb:x
+			ifobjin:officer,$available
+				msg:The officer is a young lad. He looks overly proud of his uniform.
+	scenery:office
+		syn:office,table
+		verb:x
+			msg:It's a rather ordinary front office you'd expect to find in administrative places: headed paper, an official stamp with the appropriate ink, etc...
+			if:harbouridea
+				if:!harbourideasaid
+					msg:This gives you an idea...
+					set:harbourideasaid
+room:harbourstorage
+	name:Harbour Storage
+	image:png\harbourstorage_C64.png
+	desc:You are in a large warehouse. A railway enters the building: yesterday morning, you left the wooden boxes here, ready to be loaded on a steam train destined for Turin. Now, it's empty. A small office is enclosed to the east, behind a door.
+	attr.shortdesc:in a large warehouse
+	attr.exits:north, south
+	verb:n
+		goto:customs
+	verb:s
+		goto:darsena
+	verb:e
+		if:officereachable
+			goto:office
+		else
+			msg:You can't go that way
+	verb:put|use
+		withobj:brochure
+			withobj:door
+				if:greasedbrochure
+					if:!brochureondoor
+						set:brochureondoor
+						msg:You slide the brochure in the gap between the door and the jamb, reaching the latch. 
+						msg:A more elastic and flexible material than the cardboard would be better at this kind of job, but it's an old lock and it does not resist you long.
+						msg:You move the latch and open the door.
+						set:officereachable
+	scenery:door
+		verb:open|x
+			if:!bitDG
+				msg:The door, which opens inwards, is locked.
+			else
+				msg:You need more than a pretty ordinary door to stop you!
+	scenery:table
+		verb:x
+			msg:It's a small office, dedicated to administrative tasks.
+	scenery:tram
+		verb:x
+			msg:Those rails allow yard workers to load goods directly on a freight train. Smart!
+room:office
+	name:Office
+	image:png\office_C64.png
+	desc:You are in a small box inside the warehouse. There is a desk with a chair, a few dossiers in a file and a wastebin in a corner.
+	attr.shortdesc:in a small box inside the warehouse
+	attr.exits:west
+	verb:w
+		goto:harbourstorage
+	scenery:wastebin
+		syn:wastebin,dustbin
+		verb:x
+			if:!sheetfound
+				put:sheet,$here
+				set:sheetfound
+				msg:You have a look in the wastebin. Among other documents, you see a strange sheet of paper, maybe a letter, torn in pieces.
+	scenery:dossiers
+		verb:x
+			msg:On the desk, there are dossiers registering the goods loaded here during the last week. Like the others, our missing box's destination is recorded as Turin.
