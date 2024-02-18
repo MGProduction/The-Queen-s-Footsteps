@@ -274,19 +274,24 @@ verb:load
 verb:mem
 	dbg
 verb:gfx
-	msg:\yn\wormal, \yp\wrogressive or \ys\wtatic?
+	msg:\yn\wormal, \yp\wrogressive, \yo\wptimized or \ys\wtatic?
 	getkey
 	ifkey:N
 		gfxmode:0
-		msg:Done
 	else
-		ifkey:P
-			gfxmode:1
-			msg:Done
+		ifkey:O
+			gfxmode:4
 		else
-			ifkey:S
-				gfxmode:2
-				msg:Done
+			ifkey:P
+				gfxmode:1
+			else
+				ifkey:S
+					gfxmode:2
+				endif
+			endif
+		endif
+	endif
+	msg:Done
 talkverb:talk
 	ifobjinattr:$this,$here,visible
 		ifobj:$this,actor		

@@ -39,6 +39,8 @@ verb:help
 	msg:To quit the game, type #bye. To restart it, type #restart.
 	syn:help,info,about
 verb:knock
+verb:make
+	syn:make,do
 verb:move
 	syn:move,lift
 verb:open
@@ -251,7 +253,7 @@ obj:burner
 obj:panels
 	syn:panels,walls,paneling,wood,wall,panel
 obj:dossiers
-	syn:dossiers,dossier
+	syn:dossiers,dossier,desk
 obj:tram
 	syn:tram,rail,rails,railway,tramway
 obj:tree
@@ -680,6 +682,7 @@ room:piazzamanin
 		verb:x
 			msg:Many lines of the steam tramway pass through here.
 	scenery:stone
+		syn:stone,stones
 		verb:x
 			msg:The square is paved with porphyry stones.
 room:piazzaprincipestation
@@ -779,6 +782,7 @@ room:villaraligotto
 			msg:On one of them, you see a strange symbol composed of a stretched oval, a sort of an "\gO\w" with a wavy line placed diagonally from top left to bottom right.
 			set:symbolseen
 	scenery:handle
+		syn:handle,bell
 		verb:push
 			msg:You hear a faint ringing sound, yet nobody comes to the gate.
 		verb:x
@@ -895,7 +899,7 @@ room:harbourstorage
 				msg:The door, which opens inwards, is locked.
 			else
 				msg:You need more than a pretty ordinary door to stop you!
-	scenery:table
+	scenery:office
 		verb:x
 			msg:It's a small office, dedicated to administrative tasks.
 	scenery:tram

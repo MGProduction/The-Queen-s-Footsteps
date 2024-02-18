@@ -189,6 +189,16 @@ knock
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+make
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:make,do
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 move
 2
 <end node> 5P9i0s8y19Z
@@ -875,7 +885,7 @@ dossiers
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-syn:dossiers,dossier
+syn:dossiers,dossier,desk
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2647,6 +2657,11 @@ stone
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:stone,stones
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -3111,6 +3126,11 @@ handle
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:handle,bell
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -3561,7 +3581,7 @@ else
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-table
+office
 4
 <end node> 5P9i0s8y19Z
 dt=Text

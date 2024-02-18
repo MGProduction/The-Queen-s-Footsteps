@@ -375,7 +375,7 @@ x[17]::harbourstorage[22] = $4e/78
 			msg::[170]You need more than a pretty ordinary door to stop you!
 		endif[135]
 x[17]::harbourstorage[22] = $4f/79
-	withobj::[54]harbourstorage.table
+	withobj::[54]harbourstorage.office
 		msg::[44]It's a small office, dedicated to administrative tasks.
 x[17]::office[23] = $50/80
 	withobj::[18]dossiers
@@ -1030,22 +1030,24 @@ load[36]::$everywhere[246] = $7f/127
 mem[37]::$everywhere[246] = $80/128
 	dbg[131]
 gfx[38]::$everywhere[246] = $81/129
-	msg::[191]\yn\wormal, \yp\wrogressive or \ys\wtatic?
+	msg::[191]\yn\wormal, \yp\wrogressive, \yo\wptimized or \ys\wtatic?
 	getkey[137]
 	ifkey[146]::78
 		gfxmode[138]::0
-		msg::[14]Done
 	else[133]
-		ifkey[146]::80
-			gfxmode[138]::1
-			msg::[14]Done
+		ifkey[146]::79
+			gfxmode[138]::4
 		else[133]
-			ifkey[146]::83
-				gfxmode[138]::2
-				msg::[14]Done
+			ifkey[146]::80
+				gfxmode[138]::1
+			else[133]
+				ifkey[146]::83
+					gfxmode[138]::2
+				endif[135]
 			endif[135]
 		endif[135]
 	endif[135]
+	msg::[14]Done
 talk[39]::hotelreception[6] = $82/130
 	withobj::[33]hotelreception.clerk
 		setvar[171]
@@ -1206,15 +1208,18 @@ fill[46]::$everywhere[246] = $89/137
 	msg::[73]Please feel free to continue, if you wish to... I've become immu...
 fuck[47]::$everywhere[246] = $89/137
 	msg::[73]Please feel free to continue, if you wish to... I've become immu...
-pet[50]::$everywhere[246] = $3c/60
+make[49]::hotelroom[3] = $8a/138
+	withobj::[24]hotelroom.bed
+		msg::[68]No. You are leaving your room. The sheets will be changed anyway...
+pet[51]::$everywhere[246] = $3c/60
 	msg::[63]No need to do that now.
-pick[51]::$everywhere[246] = $8a/138
+pick[52]::$everywhere[246] = $8b/139
 	msg::[168]You may try that, but it will probably not work.
-play[52]::$everywhere[246] = $8a/138
+play[53]::$everywhere[246] = $8b/139
 	msg::[168]You may try that, but it will probably not work.
-pray[53]::$everywhere[246] = $8a/138
+pray[54]::$everywhere[246] = $8b/139
 	msg::[168]You may try that, but it will probably not work.
-repair[54]::$everywhere[246] = $8b/139
+repair[55]::$everywhere[246] = $8c/140
 	withobj::[4]sheet
 		ifisin[144]
 			ifisin[144]
@@ -1226,7 +1231,7 @@ repair[54]::$everywhere[246] = $8b/139
 			endif[135]
 		endif[135]
 	endwith[136]
-run[55]::piazzaacquaverde[11] = $8c/140
+run[56]::piazzaacquaverde[11] = $8d/141
 	withobj::[42]piazzaacquaverde.twelve
 		if::[6]addressknown
 			ifnot::[9]stridein
@@ -1236,33 +1241,33 @@ run[55]::piazzaacquaverde[11] = $8c/140
 				msg::[179]You thank him and exit the building. So... Rovelli is going to T...
 			endif[135]
 		endif[135]
-shibboleth[56]::$everywhere[246] = $71/113
+shibboleth[57]::$everywhere[246] = $71/113
 	msg::[69]No. You aren't tired, now.
-sit[57]::$everywhere[246] = $71/113
+sit[58]::$everywhere[246] = $71/113
 	msg::[69]No. You aren't tired, now.
-smell[58]::hallway[4] = $8d/141
+smell[59]::hallway[4] = $8e/142
 	msg::[108]There's a faint metallic odour mixed with the familiar smell of ...
-smell[58]::elevator[5] = $8e/142
+smell[59]::elevator[5] = $8f/143
 	msg::[21]From the smell only, you can't recognise if it's lubricating oil...
-smell[58]::piazzamanin[13] = $8f/143
+smell[59]::piazzamanin[13] = $90/144
 	msg::[83]The air smells of iodine and salt, with a faint fishy undertone....
-smell[58]::portofranco[15] = $90/144
+smell[59]::portofranco[15] = $91/145
 	msg::[115]This place has an interesting smell that mixes salty air with ci...
-smell[58]::customs[19] = $91/145
+smell[59]::customs[19] = $92/146
 	msg::[75]Salty water and fish with a scent of coal smoke.
-smell[58]::darsena[20] = $91/145
+smell[59]::darsena[20] = $92/146
 	msg::[75]Salty water and fish with a scent of coal smoke.
-smell[58]::harbourauthority[21] = $91/145
+smell[59]::harbourauthority[21] = $92/146
 	msg::[75]Salty water and fish with a scent of coal smoke.
-smell[58]::harbourstorage[22] = $91/145
+smell[59]::harbourstorage[22] = $92/146
 	msg::[75]Salty water and fish with a scent of coal smoke.
-smell[58]::office[23] = $91/145
+smell[59]::office[23] = $92/146
 	msg::[75]Salty water and fish with a scent of coal smoke.
-smell[58]::$everywhere[246] = $92/146
+smell[59]::$everywhere[246] = $93/147
 	msg::[160]You don't smell anything in particular, apart from a barely perc...
-wash[61]::$everywhere[246] = $3c/60
+wash[62]::$everywhere[246] = $3c/60
 	msg::[63]No need to do that now.
-write[63]::$everywhere[246] = $93/147
+write[64]::$everywhere[246] = $94/148
 	ifisin[144]
 		ifisin[144]
 			msg::[183]You write an elegantly handwritten note on the stamped headed pa...
@@ -1276,11 +1281,8 @@ write[63]::$everywhere[246] = $93/147
 			msg::[185]You'd need something to write...
 		endif[135]
 	endif[135]
-xyzzy[64]::$everywhere[246] = $94/148
+xyzzy[65]::$everywhere[246] = $95/149
 	msg::[165]You have a strange sensation, almost as if you were becoming lig...
-make[65]::hotelroom[3] = $95/149
-	withobj::[24]hotelroom.bed
-		msg::[68]No. You are leaving your room. The sheets will be changed anyway...
 press[66]::elevator[5] = $96/150
 	withobj::[31]elevator.buttons
 		goto::[6]hotelreception
