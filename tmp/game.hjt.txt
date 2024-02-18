@@ -351,6 +351,9 @@ room:hotelroom
 	scenery:light
 		verb:x
 			msg:You turn your face towards the sun, closing your eyes. You can feel its gentle warmth on your skin.
+	scenery:carpet
+		verb:x
+			msg:It's a thick wool carpet. It helps to keep the place warm in winter time, but walking on it is pleasing in summer, too.
 room:hallway
 	name:Hallway
 	image:png\hallway_C64.png
@@ -369,6 +372,9 @@ room:hallway
 	scenery:burner
 		verb:x
 			msg:It does not produce much light.
+	scenery:carpet
+		verb:x
+			msg:It's a thick wool carpet. It helps to keep the place warm in winter time, but walking on it is pleasing in summer, too.
 room:elevator
 	name:Elevator
 	image:png\elevator_C64.png
@@ -791,6 +797,8 @@ room:customs
 		goto:harbourstorage
 	verb:e
 		goto:piazzaprincipestation
+	verb:smell
+		msg:Salty water and fish with a scent of coal smoke.
 room:darsena
 	name:Darsena
 	image:png\darsena_C64.png
@@ -801,6 +809,8 @@ room:darsena
 		goto:harbourstorage
 	verb:s
 		goto:harbourauthority
+	verb:smell
+		msg:Salty water and fish with a scent of coal smoke.
 room:harbourauthority
 	name:Harbour Authority
 	image:png\harbourauthority_C64.png
@@ -816,6 +826,8 @@ room:harbourauthority
 		goto:darsena
 	verb:s
 		goto:portofranco
+	verb:smell
+		msg:Salty water and fish with a scent of coal smoke.
 	verb:take
 		withobj:paper
 			ifobjin:officer,$available
@@ -875,6 +887,8 @@ room:harbourstorage
 						msg:A more elastic and flexible material than the cardboard would be better at this kind of job, but it's an old lock and it does not resist you long.
 						msg:You move the latch and open the door.
 						set:officereachable
+	verb:smell
+		msg:Salty water and fish with a scent of coal smoke.
 	scenery:door
 		verb:open|x
 			if:!bitDG
@@ -895,6 +909,8 @@ room:office
 	attr.exits:west
 	verb:w
 		goto:harbourstorage
+	verb:smell
+		msg:Salty water and fish with a scent of coal smoke.
 	scenery:wastebin
 		syn:wastebin,dustbin
 		verb:x

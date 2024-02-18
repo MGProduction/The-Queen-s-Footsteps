@@ -1247,6 +1247,23 @@ msg:You turn your face towards the sun, closing your eyes. You can feel its gent
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+carpet
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:It's a thick wool carpet. It helps to keep the place warm in winter time, but walking on it is pleasing in summer, too.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 hallway
 2
 <end node> 5P9i0s8y19Z
@@ -1344,6 +1361,23 @@ dt=Text
 x
 6
 msg:It does not produce much light.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+carpet
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:It's a thick wool carpet. It helps to keep the place warm in winter time, but walking on it is pleasing in summer, too.
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3173,6 +3207,13 @@ goto:piazzaprincipestation
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+smell
+4
+msg:Salty water and fish with a scent of coal smoke.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 darsena
 2
 <end node> 5P9i0s8y19Z
@@ -3224,6 +3265,13 @@ dt=Text
 s
 4
 goto:harbourauthority
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+smell
+4
+msg:Salty water and fish with a scent of coal smoke.
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3283,6 +3331,13 @@ dt=Text
 s
 4
 goto:portofranco
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+smell
+4
+msg:Salty water and fish with a scent of coal smoke.
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3474,6 +3529,13 @@ if:greasedbrochure
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+smell
+4
+msg:Salty water and fish with a scent of coal smoke.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 scenery
 3
 <end node> 5P9i0s8y19Z
@@ -3577,6 +3639,13 @@ dt=Text
 w
 4
 goto:harbourstorage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+smell
+4
+msg:Salty water and fish with a scent of coal smoke.
 
 <end node> 5P9i0s8y19Z
 dt=Text
