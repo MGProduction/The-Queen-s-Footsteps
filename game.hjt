@@ -948,13 +948,14 @@ dt=Text
 onfirst
 3
 clear
+loadimg
 msg:\c##SUBTITLE##
-	\c
 	\cOriginal \yAWS\w Game by
 	\c\y##ORIGINALAUTHOR##\w
 	\c
 	\c\yStoryTllrC64\w release 
 	\cby \y##AUTHOR##\w
+	\c\g1.0.1
 	\c
 	\c\gGPL-3.0 license\w
 waitkey
@@ -986,6 +987,7 @@ dt=Text
 onfirst
 3
 clear
+loadimg
 msg:Today is August 27th, 1904.
 msg:Nine months ago, you, \yEmilia Vittorini\w, joined the Italian Archeological Expedition in Egypt led by Ernesto Schiaparelli, the director of the Egyptian Museum of Turin.
 msg:You are now back in Genoa, Italy: your steam ferry arrived three days ago with 25 wooden boxes containing Queen Nefertari Meritmut's grave goods, a real treasure! 
@@ -1012,6 +1014,7 @@ dt=Text
 onfirst
 3
 clear
+loadimg
 msg:While you walk towards the Piazza Principe train station you think that there are strange things moving around this story and you are now more than ever determined to find the missing box. 
 msg:On another hand, you're happy to come home, to see your family. 
 waitkey
@@ -2468,6 +2471,11 @@ x
 4
 msg:No need to do that now.
 
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$unknown
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>

@@ -79,6 +79,7 @@ movementverb:enter
 genericverb:x
 	synonym:x,examine,ex,read,search
 	withobj:$none
+		loadimg
 		msg:$roomdesc
 		ifundef:$room.exits
 			msg:There are no evident exits.
@@ -111,6 +112,7 @@ genericverb:x
 genericverb:l
 	synonym:look,l,look at
 	withobj:$none
+		loadimg
 		msg:$roomdesc
 		ifundef:$room.exits
 			msg:There are no evident exits.
@@ -210,6 +212,7 @@ verb:$unknown
 	msg:What?
 verb:onfirst
 	clear
+	loadimg
 	ifundef:$room.exits	
 		msg:$roomdesc
 	else
@@ -274,7 +277,7 @@ verb:load
 verb:mem
 	dbg
 verb:gfx
-	msg:\yn\wormal, \yp\wrogressive, \yo\wptimized or \ys\wtatic?
+	msg:\yn\wormal, \yp\wrogressive or \yo\wptimized?
 	getkey
 	ifkey:N
 		gfxmode:0
@@ -284,10 +287,6 @@ verb:gfx
 		else
 			ifkey:P
 				gfxmode:1
-			else
-				ifkey:S
-					gfxmode:2
-				endif
 			endif
 		endif
 	endif

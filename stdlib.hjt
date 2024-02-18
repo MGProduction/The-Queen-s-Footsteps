@@ -371,6 +371,7 @@ dt=Text
 <node>
 withobj:$none
 3
+loadimg
 msg:$roomdesc
 ifundef:$room.exits
 	msg:There are no evident exits.
@@ -431,6 +432,7 @@ dt=Text
 <node>
 withobj:$none
 3
+loadimg
 msg:$roomdesc
 ifundef:$room.exits
 	msg:There are no evident exits.
@@ -659,6 +661,7 @@ dt=Text
 onfirst
 2
 clear
+loadimg
 ifundef:$room.exits	
 	msg:$roomdesc
 else
@@ -780,7 +783,7 @@ dt=Text
 <node>
 gfx
 2
-msg:\yn\wormal, \yp\wrogressive, \yo\wptimized or \ys\wtatic?
+msg:\yn\wormal, \yp\wrogressive or \yo\wptimized?
 getkey
 ifkey:N
 	gfxmode:0
@@ -790,10 +793,6 @@ else
 	else
 		ifkey:P
 			gfxmode:1
-		else
-			ifkey:S
-				gfxmode:2
-			endif
 		endif
 	endif
 endif
