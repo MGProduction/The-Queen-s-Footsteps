@@ -212,60 +212,63 @@ go[15]::$everywhere[246] = $08/8
 enter[16]::$everywhere[246] = $08/8
 	msg::[145]You can't go that way
 x[17]::hotelroom[3] = $20/32
-	withobj::[16]hotelroom.mirror
-		msg::[27]In the mirror you see a young woman, about 5 ft 6 in tall, with ...
-x[17]::hotelroom[3] = $21/33
-	withobj::[17]hotelroom.bed
-		msg::[12]Certainly, it was a very comfortable bed.
-x[17]::hotelroom[3] = $22/34
-	withobj::[18]hotelroom.windows
+	withobj::[3]windows
 		msg::[172]You see Via Roma, in Genoa, outside.
-x[17]::hotelroom[3] = $23/35
-	withobj::[19]hotelroom.tapestry
-		msg::[18]Flowers and laurel leaves: decorative, indeed!
-x[17]::hotelroom[3] = $24/36
-	withobj::[20]hotelroom.radiator
-		msg::[41]It's a modern cast-iron radiator, with thin feet and ornate geom...
-x[17]::hotelroom[3] = $25/37
-	withobj::[21]hotelroom.washbowl
-		msg::[16]Everything you need for your morning toilette.
-x[17]::hotelroom[3] = $26/38
-	withobj::[22]hotelroom.burner
+x[17]::hotelroom[3] = $21/33
+	withobj::[16]burner
 		msg::[30]It has five burners, decorated with brass laurel leaves. Now it'...
+x[17]::hotelroom[3] = $22/34
+	withobj::[23]hotelroom.mirror
+		msg::[27]In the mirror you see a young woman, about 5 ft 6 in tall, with ...
+x[17]::hotelroom[3] = $23/35
+	withobj::[24]hotelroom.bed
+		msg::[12]Certainly, it was a very comfortable bed.
+x[17]::hotelroom[3] = $24/36
+	withobj::[25]hotelroom.tapestry
+		msg::[18]Flowers and laurel leaves: decorative, indeed!
+x[17]::hotelroom[3] = $25/37
+	withobj::[26]hotelroom.radiator
+		msg::[41]It's a modern cast-iron radiator, with thin feet and ornate geom...
+x[17]::hotelroom[3] = $26/38
+	withobj::[27]hotelroom.washbowl
+		msg::[16]Everything you need for your morning toilette.
 x[17]::hotelroom[3] = $27/39
-	withobj::[23]hotelroom.light
+	withobj::[28]hotelroom.light
 		msg::[179]You turn your face towards the sun, closing your eyes. You can f...
 x[17]::hallway[4] = $28/40
-	withobj::[24]hallway.panels
-		msg::[54]It's walnut hardwood.
-x[17]::hallway[4] = $29/41
-	withobj::[25]hallway.burner
+	withobj::[16]burner
 		msg::[28]It does not produce much light.
+x[17]::hallway[4] = $29/41
+	withobj::[17]panels
+		msg::[54]It's walnut hardwood.
 x[17]::elevator[5] = $2a/42
-	withobj::[26]elevator.buttons
+	withobj::[29]elevator.buttons
 		msg::[10]Brassy!
 x[17]::elevator[5] = $2b/43
-	withobj::[27]elevator.door
+	withobj::[30]elevator.door
 		msg::[85]The door mechanism oozes a little bit of grease.
 		put[161]
-x[17]::hotelreception[6] = $2c/44
-	withobj::[29]hotelreception.windows
+x[17]::hotelreception[6] = $20/32
+	withobj::[3]windows
 		msg::[172]You see Via Roma, in Genoa, outside.
+x[17]::hotelreception[6] = $2c/44
+	withobj::[17]panels
+		msg::[122]Train tickets available: Turin La Spezia, Pisa (P.za Principe) s...
 x[17]::hotelreception[6] = $2d/45
-	withobj::[30]hotelreception.curtains
+	withobj::[32]hotelreception.curtains
 		msg::[109]They're clean.
 x[17]::hotelreception[6] = $2e/46
-	withobj::[31]hotelreception.panels
-		msg::[122]Train tickets available: Turin La Spezia, Pisa (P.za Principe) s...
-x[17]::hotelreception[6] = $2f/47
-	withobj::[32]hotelreception.elevator
+	withobj::[33]hotelreception.elevator
 		msg::[42]It's a modern, efficient, hydraulic elevator. The steam engine t...
-x[17]::archivebuilding[7] = $30/48
-	withobj::[33]archivebuilding.building
+x[17]::archivebuilding[7] = $2f/47
+	withobj::[21]building
 		msg::[37]It's a large brick palace, built during the Middle Ages.
-x[17]::palazzoducale[10] = $31/49
+x[17]::palazzoducale[10] = $30/48
 	withobj::[2]paper
 		msg::[40]It's a long paper ribbon. On one side of the receiver it is blan...
+x[17]::palazzoducale[10] = $31/49
+	withobj::[18]dossiers
+		msg::[50]It's an ordinary desk, meant to receive clients.
 x[17]::palazzoducale[10] = $32/50
 	withobj::[36]palazzoducale.receiver
 		msg::[98]The receiver writes dots and dashes on a long ribbon of paper.
@@ -278,14 +281,14 @@ x[17]::palazzoducale[10] = $34/52
 x[17]::palazzoducale[10] = $35/53
 	withobj::[39]palazzoducale.plug
 		msg::[115]Those are simple plugs, an inch long, used in the selector.
-x[17]::palazzoducale[10] = $36/54
-	withobj::[40]palazzoducale.dossiers
-		msg::[50]It's an ordinary desk, meant to receive clients.
-x[17]::piazzaacquaverde[11] = $37/55
-	withobj::[41]piazzaacquaverde.building
+x[17]::piazzaacquaverde[11] = $36/54
+	withobj::[21]building
 		msg::[55]Large houses and building are around the place, they have a numb...
+x[17]::piazzaacquaverde[11] = $37/55
+	withobj::[22]statue
+		msg::[47]It's a tall column, with a statue of Christopher Columbus on the...
 x[17]::piazzaacquaverde[11] = $38/56
-	withobj::[42]piazzaacquaverde.twelve
+	withobj::[40]piazzaacquaverde.twelve
 		if::[6]addressknown
 			set::[9]stridein
 			msg::[160]You find number 12 and stride in. There is a doorman and you ask...
@@ -293,64 +296,61 @@ x[17]::piazzaacquaverde[11] = $38/56
 			msg::[177]You thank him and exit the building. So... Rovelli is going to T...
 		endif[135]
 x[17]::piazzaacquaverde[11] = $39/57
-	withobj::[43]piazzaacquaverde.statue
-		msg::[47]It's a tall column, with a statue of Christopher Columbus on the...
-x[17]::piazzaacquaverde[11] = $3a/58
-	withobj::[44]piazzaacquaverde.garden
+	withobj::[41]piazzaacquaverde.garden
 		msg::[19]Flowery!
-x[17]::piazzaacquaverde[11] = $3b/59
+x[17]::piazzaacquaverde[11] = $3a/58
 	msg::[62]No need to do that now.
-x[17]::piazzadeferrari[12] = $3c/60
-	withobj::[45]piazzadeferrari.building
+x[17]::piazzadeferrari[12] = $3b/59
+	withobj::[21]building
 		msg::[58]Many of the buildings are occupied by banks. Economic activities...
-x[17]::piazzadeferrari[12] = $3d/61
-	withobj::[46]piazzadeferrari.statue
+x[17]::piazzadeferrari[12] = $3c/60
+	withobj::[22]statue
 		msg::[33]It represents Giuseppe Garibaldi, riding a horse.
+x[17]::piazzamanin[13] = $3d/61
+	withobj::[19]tram
+		msg::[57]Many lines of the steam tramway pass through here.
 x[17]::piazzamanin[13] = $3e/62
-	withobj::[47]piazzamanin.tree
+	withobj::[20]tree
 		msg::[114]Those are horse chestnuts.
 x[17]::piazzamanin[13] = $3f/63
-	withobj::[48]piazzamanin.tram
-		msg::[57]Many lines of the steam tramway pass through here.
-x[17]::piazzamanin[13] = $40/64
-	withobj::[49]piazzamanin.stone
+	withobj::[42]piazzamanin.stone
 		msg::[102]The square is paved with porphyry stones.
-x[17]::piazzaprincipestation[14] = $41/65
-	withobj::[50]piazzaprincipestation.facade
+x[17]::piazzaprincipestation[14] = $40/64
+	withobj::[43]piazzaprincipestation.facade
 		msg::[38]It's a large facade with an arch supported by six columns. Marbl...
-x[17]::portofranco[15] = $42/66
-	withobj::[51]portofranco.booths
+x[17]::portofranco[15] = $41/65
+	withobj::[44]portofranco.booths
 		msg::[82]The booths sell fish and street food, as well as spices. You are...
-x[17]::portofranco[15] = $43/67
-	withobj::[52]portofranco.store
+x[17]::portofranco[15] = $42/66
+	withobj::[45]portofranco.store
 		msg::[108]They sell many things, rather uninteresting for you. However, yo...
-x[17]::portofranco[15] = $44/68
-	withobj::[53]portofranco.porch
+x[17]::portofranco[15] = $43/67
+	withobj::[46]portofranco.porch
 		msg::[20]For sure, it's a long porch!.
-x[17]::viaroma[17] = $45/69
-	withobj::[54]viaroma.building
-		msg::[101]The shops mainly sell luxury items: not relevant for what you're...
-x[17]::viaroma[17] = $46/70
-	withobj::[55]viaroma.tram
+x[17]::viaroma[17] = $44/68
+	withobj::[19]tram
 		msg::[6]A modern steam tramway passes here every 10 minutes.
+x[17]::viaroma[17] = $45/69
+	withobj::[21]building
+		msg::[101]The shops mainly sell luxury items: not relevant for what you're...
+x[17]::villaraligotto[18] = $46/70
+	withobj::[20]tree
+		msg::[73]Raligotto in person made you visit his park yesterday evening. T...
 x[17]::villaraligotto[18] = $47/71
-	withobj::[56]villaraligotto.gate
+	withobj::[47]villaraligotto.gate
 		msg::[39]It's a large wrought-iron gate, topped with polished brass decor...
 		msg::[70]On one of them, you see a strange symbol composed of a stretched...
 		set::[5]symbolseen
 x[17]::villaraligotto[18] = $48/72
-	withobj::[57]villaraligotto.handle
+	withobj::[48]villaraligotto.handle
 		msg::[105]There is a pressurised air line that goes towards the villa. Whe...
-x[17]::villaraligotto[18] = $49/73
-	withobj::[58]villaraligotto.tree
-		msg::[73]Raligotto in person made you visit his park yesterday evening. T...
-x[17]::harbourauthority[21] = $4a/74
-	withobj::[59]harbourauthority.officer
+x[17]::harbourauthority[21] = $49/73
+	withobj::[49]harbourauthority.officer
 		ifisin[144]
 			msg::[95]The officer is a young lad. He looks overly proud of his uniform...
 		endif[135]
-x[17]::harbourauthority[21] = $4b/75
-	withobj::[60]harbourauthority.office
+x[17]::harbourauthority[21] = $4a/74
+	withobj::[50]harbourauthority.office
 		msg::[43]It's a rather ordinary front office you'd expect to find in admi...
 		if::[13]harbouridea
 			ifnot::[16]harbourideasaid
@@ -358,30 +358,30 @@ x[17]::harbourauthority[21] = $4b/75
 				set::[16]harbourideasaid
 			endif[135]
 		endif[135]
+x[17]::harbourstorage[22] = $4b/75
+	withobj::[19]tram
+		msg::[116]Those rails allow yard workers to load goods directly on a freig...
 x[17]::harbourstorage[22] = $4c/76
-	withobj::[61]harbourstorage.door
+	withobj::[51]harbourstorage.door
 		ifnot::[0]bitDG
 			msg::[86]The door, which opens inwards, is locked.
 		else[133]
 			msg::[168]You need more than a pretty ordinary door to stop you!
 		endif[135]
 x[17]::harbourstorage[22] = $4d/77
-	withobj::[62]harbourstorage.table
+	withobj::[52]harbourstorage.table
 		msg::[44]It's a small office, dedicated to administrative tasks.
-x[17]::harbourstorage[22] = $4e/78
-	withobj::[63]harbourstorage.tram
-		msg::[116]Those rails allow yard workers to load goods directly on a freig...
+x[17]::office[23] = $4e/78
+	withobj::[18]dossiers
+		msg::[71]On the desk, there are dossiers registering the goods loaded her...
 x[17]::office[23] = $4f/79
-	withobj::[64]office.wastebin
+	withobj::[53]office.wastebin
 		ifnot::[14]sheetfound
 			put[161]
 			set::[14]sheetfound
 			msg::[162]You have a look in the wastebin. Among other documents, you see ...
 		endif[135]
-x[17]::office[23] = $50/80
-	withobj::[65]office.dossiers
-		msg::[71]On the desk, there are dossiers registering the goods loaded her...
-x[17]::$everywhere[246] = $51/81
+x[17]::$everywhere[246] = $50/80
 	withobj::[4]sheet
 		ifisin[144]
 			ifisin[144]
@@ -395,12 +395,12 @@ x[17]::$everywhere[246] = $51/81
 				msg::[100]The sheet is torn in small pieces. You may recompose it but you ...
 			endif[135]
 		endif[135]
-x[17]::$everywhere[246] = $52/82
+x[17]::$everywhere[246] = $51/81
 	withobj::[6]quill
 		ifisin[144]
 			msg::[36]It's a goose quill and a moderate quantity of blue ink.
 		endif[135]
-x[17]::$everywhere[246] = $53/83
+x[17]::$everywhere[246] = $52/82
 	withobj::[7]brochure
 		ifisin[144]
 			if::[1]greasedbrochure
@@ -409,12 +409,12 @@ x[17]::$everywhere[246] = $53/83
 				msg::[35]It's a description of the various services offered by the Grand ...
 			endif[135]
 		endif[135]
-x[17]::$everywhere[246] = $54/84
+x[17]::$everywhere[246] = $53/83
 	withobj::[8]grease
 		ifisin[144]
 			msg::[75]Someone from maintenance was a little overzealous greasing the d...
 		endif[135]
-x[17]::$everywhere[246] = $55/85
+x[17]::$everywhere[246] = $54/84
 	withobj::[9]telegram
 		ifisin[144]
 			msg::[51]It's an urgent telegram from Schiaparelli, the director of the E...
@@ -423,17 +423,17 @@ x[17]::$everywhere[246] = $55/85
 			set::[2]telegramread
 			set::[3]telegramforcar
 		endif[135]
-x[17]::$everywhere[246] = $56/86
+x[17]::$everywhere[246] = $55/85
 	withobj::[11]headedpaper
 		ifisin[144]
 			msg::[183]You'd need something to write...
 		endif[135]
-x[17]::$everywhere[246] = $57/87
+x[17]::$everywhere[246] = $56/86
 	withobj::[12]card
 		ifisin[144]
 			msg::[32]It reads "\gGE240 Rovelli Antonio, P.za Acquaverde 12.\w" It is ...
 		endif[135]
-x[17]::$everywhere[246] = $58/88
+x[17]::$everywhere[246] = $57/87
 	withobj::[13]letter
 		ifisin[144]
 			msg::[45]It's a sort of puzzle, but you are good at those things: you use...
@@ -445,16 +445,16 @@ x[17]::$everywhere[246] = $58/88
 				msg::[59]Maybe there is a connection: you should find someone that can he...
 			endif[135]
 		endif[135]
-x[17]::$everywhere[246] = $59/89
+x[17]::$everywhere[246] = $58/88
 	withobj::[14]order
 		ifisin[144]
 			msg::[31]It looks official!
 		endif[135]
-x[17]::$everywhere[246] = $5a/90
+x[17]::$everywhere[246] = $59/89
 	withobj::[5]me
 		msg::[184]You'll examine yourself much better with a mirror.
 	endwith[136]
-x[17]::$everywhere[246] = $5b/91
+x[17]::$everywhere[246] = $5a/90
 	withobj::[249]$none
 		msgattr::[1]topscore
 		ifundef::[3]"\gWell... it seems that everything is in order.\w"
@@ -492,7 +492,7 @@ x[17]::$everywhere[246] = $5b/91
 			msg::[5].
 		endif[135]
 	endwith[136]
-x[17]::$everywhere[246] = $5c/92
+x[17]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -506,7 +506,7 @@ x[17]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-l[18]::$everywhere[246] = $5d/93
+l[18]::$everywhere[246] = $5c/92
 	withobj::[249]$none
 		msgattr::[1]topscore
 		ifundef::[3]"\gWell... it seems that everything is in order.\w"
@@ -535,7 +535,7 @@ l[18]::$everywhere[246] = $5d/93
 			msg::[157]You don't see that here
 		endif[135]
 	endwith[136]
-l[18]::$everywhere[246] = $5c/92
+l[18]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -549,7 +549,7 @@ l[18]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-take[19]::elevator[5] = $5e/94
+take[19]::elevator[5] = $5d/93
 	withobj::[8]grease
 		ifisin[144]
 			msg::[180]You use the brochure to take a little bit of grease from the flo...
@@ -558,7 +558,7 @@ take[19]::elevator[5] = $5e/94
 		else[133]
 			msg::[146]You can't take the grease with your bare hands. That would be ve...
 		endif[135]
-take[19]::harbourauthority[21] = $5f/95
+take[19]::harbourauthority[21] = $5e/94
 	withobj::[2]paper
 		ifisin[144]
 			msg::[148]You can't touch it while the officer is present!
@@ -569,7 +569,7 @@ take[19]::harbourauthority[21] = $5f/95
 			msg::[148]You can't touch it while the officer is present!
 		endif[135]
 	endwith[136]
-take[19]::$everywhere[246] = $60/96
+take[19]::$everywhere[246] = $5f/95
 	withobj::[6]quill
 		ifisin[144]
 			ifisin[144]
@@ -580,7 +580,7 @@ take[19]::$everywhere[246] = $60/96
 				msg::[66]No. That would spill ink everywhere!
 			endif[135]
 		endif[135]
-take[19]::$everywhere[246] = $61/97
+take[19]::$everywhere[246] = $60/96
 	withobj::[10]stamp
 		ifisin[144]
 			ifisin[144]
@@ -595,7 +595,7 @@ take[19]::$everywhere[246] = $61/97
 				endif[135]
 			endif[135]
 		endif[135]
-take[19]::$everywhere[246] = $62/98
+take[19]::$everywhere[246] = $61/97
 	withobj::[11]headedpaper
 		ifisin[144]
 			ifisin[144]
@@ -610,7 +610,7 @@ take[19]::$everywhere[246] = $62/98
 				endif[135]
 			endif[135]
 		endif[135]
-take[19]::$everywhere[246] = $63/99
+take[19]::$everywhere[246] = $62/98
 	withobj::[245]$every
 		ifobjinattr[148]
 			ifis[142]
@@ -635,7 +635,7 @@ take[19]::$everywhere[246] = $63/99
 			endif[135]
 		endif[135]
 	endwith[136]
-take[19]::$everywhere[246] = $5c/92
+take[19]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -649,7 +649,7 @@ take[19]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-drop[20]::$everywhere[246] = $64/100
+drop[20]::$everywhere[246] = $63/99
 	withobj::[1]money
 		msg::[64]No reason to do that.
 	endwith[136]
@@ -658,7 +658,7 @@ drop[20]::$everywhere[246] = $64/100
 			msg::[64]No reason to do that.
 		endif[135]
 	endwith[136]
-drop[20]::$everywhere[246] = $65/101
+drop[20]::$everywhere[246] = $64/100
 	withobj::[245]$every
 		ifisin[144]
 			ifis[142]
@@ -674,7 +674,7 @@ drop[20]::$everywhere[246] = $65/101
 			msg::[154]You don't have it
 		endif[135]
 	endwith[136]
-drop[20]::$everywhere[246] = $5c/92
+drop[20]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -688,15 +688,15 @@ drop[20]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-use[21]::hotelroom[3] = $66/102
-	withobj::[17]hotelroom.bed
+use[21]::hotelroom[3] = $65/101
+	withobj::[24]hotelroom.bed
 		msg::[68]No. You aren't tired, now.
-use[21]::hotelroom[3] = $67/103
-	withobj::[21]hotelroom.washbowl
+use[21]::hotelroom[3] = $66/102
+	withobj::[27]hotelroom.washbowl
 		msg::[134]You already washed yourself and you are now wearing your clothes...
-use[21]::harbourstorage[22] = $68/104
+use[21]::harbourstorage[22] = $67/103
 	withobj::[7]brochure
-		withobj::[61]harbourstorage.door
+		withobj::[51]harbourstorage.door
 			if::[1]greasedbrochure
 				ifnot::[19]brochureondoor
 					set::[19]brochureondoor
@@ -708,7 +708,7 @@ use[21]::harbourstorage[22] = $68/104
 			endif[135]
 		endwith[136]
 	endwith[136]
-use[21]::$everywhere[246] = $69/105
+use[21]::$everywhere[246] = $68/104
 	withobj::[2]paper
 		ifisin[144]
 			ifisin[144]
@@ -720,7 +720,7 @@ use[21]::$everywhere[246] = $69/105
 				put[161]
 			endif[135]
 		endif[135]
-use[21]::$everywhere[246] = $6a/106
+use[21]::$everywhere[246] = $69/105
 	withobj::[11]headedpaper
 		ifisin[144]
 			ifisin[144]
@@ -729,11 +729,11 @@ use[21]::$everywhere[246] = $6a/106
 				put[161]
 			endif[135]
 		endif[135]
-use[21]::$everywhere[246] = $6b/107
+use[21]::$everywhere[246] = $6a/106
 	withobj::[245]$every
 		msg::[123]Try a more specific action.
 	endwith[136]
-use[21]::$everywhere[246] = $5c/92
+use[21]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -747,10 +747,10 @@ use[21]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-push[22]::villaraligotto[18] = $6c/108
-	withobj::[57]villaraligotto.handle
+push[22]::villaraligotto[18] = $6b/107
+	withobj::[48]villaraligotto.handle
 		msg::[165]You hear a faint ringing sound, yet nobody comes to the gate.
-push[22]::$everywhere[246] = $5c/92
+push[22]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -764,7 +764,7 @@ push[22]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-pull[23]::$everywhere[246] = $5c/92
+pull[23]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -779,17 +779,17 @@ pull[23]::$everywhere[246] = $5c/92
 		endif[135]
 	endwith[136]
 open[24]::harbourstorage[22] = $4c/76
-	withobj::[61]harbourstorage.door
+	withobj::[51]harbourstorage.door
 		ifnot::[0]bitDG
 			msg::[86]The door, which opens inwards, is locked.
 		else[133]
 			msg::[168]You need more than a pretty ordinary door to stop you!
 		endif[135]
-open[24]::$everywhere[246] = $6d/109
-	withobj::[3]window
+open[24]::$everywhere[246] = $6c/108
+	withobj::[3]windows
 		msg::[62]No need to do that now.
 	endwith[136]
-open[24]::$everywhere[246] = $6e/110
+open[24]::$everywhere[246] = $6d/109
 	ifisin[144]
 		ifis[142]
 			ifis[142]
@@ -802,7 +802,7 @@ open[24]::$everywhere[246] = $6e/110
 			msg::[150]You cannot open it
 		endif[135]
 	endif[135]
-open[24]::$everywhere[246] = $5c/92
+open[24]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -816,7 +816,7 @@ open[24]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-close[25]::$everywhere[246] = $6f/111
+close[25]::$everywhere[246] = $6e/110
 	ifisin[144]
 		ifis[142]
 			ifis[142]
@@ -829,7 +829,7 @@ close[25]::$everywhere[246] = $6f/111
 			msg::[149]You cannot close it
 		endif[135]
 	endif[135]
-close[25]::$everywhere[246] = $5c/92
+close[25]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -843,7 +843,7 @@ close[25]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-lock[26]::$everywhere[246] = $5c/92
+lock[26]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -857,7 +857,7 @@ lock[26]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-unlock[27]::$everywhere[246] = $5c/92
+unlock[27]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -871,9 +871,9 @@ unlock[27]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-show[28]::$everywhere[246] = $70/112
+show[28]::$everywhere[246] = $6f/111
 	msg::[68]No. You aren't tired, now.
-show[28]::$everywhere[246] = $5c/92
+show[28]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -887,7 +887,7 @@ show[28]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-give[29]::archives[8] = $71/113
+give[29]::archives[8] = $70/112
 	withobj::[15]archives.employee
 		withobj::[14]order
 			ifisin[144]
@@ -903,7 +903,7 @@ give[29]::archives[8] = $71/113
 				endif[135]
 			endif[135]
 		endwith[136]
-give[29]::archives[8] = $72/114
+give[29]::archives[8] = $71/113
 	withobj::[15]archives.employee
 		ifisin[144]
 			ifisin[144]
@@ -918,13 +918,13 @@ give[29]::archives[8] = $72/114
 			endif[135]
 		endif[135]
 	endwith[136]
-give[29]::emporium[9] = $73/115
+give[29]::emporium[9] = $72/114
 	withobj::[1]money
 		msg::[79]Talk with the clerk to buy things.
-give[29]::$everywhere[246] = $74/116
+give[29]::$everywhere[246] = $73/115
 	withobj::[1]money
 		msg::[65]No, use them to buy things, instead.
-give[29]::$everywhere[246] = $75/117
+give[29]::$everywhere[246] = $74/116
 	withobj::[14]order
 		withobj::[15]archives.employee
 			ifisin[144]
@@ -940,7 +940,7 @@ give[29]::$everywhere[246] = $75/117
 				endif[135]
 			endif[135]
 		endwith[136]
-give[29]::$everywhere[246] = $5c/92
+give[29]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -954,9 +954,9 @@ give[29]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-put[30]::harbourstorage[22] = $68/104
+put[30]::harbourstorage[22] = $67/103
 	withobj::[7]brochure
-		withobj::[61]harbourstorage.door
+		withobj::[51]harbourstorage.door
 			if::[1]greasedbrochure
 				ifnot::[19]brochureondoor
 					set::[19]brochureondoor
@@ -968,9 +968,9 @@ put[30]::harbourstorage[22] = $68/104
 			endif[135]
 		endwith[136]
 	endwith[136]
-put[30]::$everywhere[246] = $76/118
+put[30]::$everywhere[246] = $75/117
 	msg::[125]What?
-put[30]::$everywhere[246] = $5c/92
+put[30]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -984,46 +984,46 @@ put[30]::$everywhere[246] = $5c/92
 			msg::[155]You don't see it here
 		endif[135]
 	endwith[136]
-help[31]::$everywhere[246] = $77/119
+help[31]::$everywhere[246] = $76/118
 	msg::[112]This is a text adventure game. Read descriptions carefully and t...
 	msg::[8]Abbreviations are possible \yx\w for \yexamine\w, \yl\w to look ...
 	msg::[118]To quit the game, type \ybye\w. To restart it, type \yrestart\w.
-help[31]::$everywhere[246] = $78/120
+help[31]::$everywhere[246] = $77/119
 	msg::[117]To act write short commands in \yVERB+ELEMENT \w (i.e. \ytake pe...
 	msg::[60]Move using cardinal directions. Use \yinventory \wto see what yo...
-inventory[32]::$everywhere[246] = $79/121
+inventory[32]::$everywhere[246] = $78/120
 	ifobjinattr[148]
 		msg::[137]You are carrying: +
 		list[151]
 	else[133]
 		msg::[140]You aren't carrying anything.
 	endif[135]
-quit[33]::$everywhere[246] = $7a/122
+quit[33]::$everywhere[246] = $79/121
 	msg::[9]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		quit[162]
 	endif[135]
-quit[33]::$everywhere[246] = $7b/123
+quit[33]::$everywhere[246] = $7a/122
 	msg::[124]Use 'bye' if you want to stop playing.
-restart[34]::$everywhere[246] = $7c/124
+restart[34]::$everywhere[246] = $7b/123
 	msg::[9]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		start[173]
 	endif[135]
-save[35]::$everywhere[246] = $7d/125
+save[35]::$everywhere[246] = $7c/124
 	save[163]
 	msg::[14]Done
-load[36]::$everywhere[246] = $7e/126
+load[36]::$everywhere[246] = $7d/125
 	msg::[9]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		load[152]
 	endif[135]
-mem[37]::$everywhere[246] = $7f/127
+mem[37]::$everywhere[246] = $7e/126
 	dbg[131]
-gfx[38]::$everywhere[246] = $80/128
+gfx[38]::$everywhere[246] = $7f/127
 	msg::[189]\yn\wormal, \yp\wrogressive or \ys\wtatic?
 	getkey[137]
 	ifkey[146]::78
@@ -1040,8 +1040,8 @@ gfx[38]::$everywhere[246] = $80/128
 			endif[135]
 		endif[135]
 	endif[135]
-talk[39]::hotelreception[6] = $81/129
-	withobj::[28]hotelreception.clerk
+talk[39]::hotelreception[6] = $80/128
+	withobj::[31]hotelreception.clerk
 		setvar[171]
 		if::[7]telegramsent
 			ifnot::[8]receivedsecondtelegram
@@ -1082,7 +1082,7 @@ talk[39]::hotelreception[6] = $81/129
 				msg::[4]"\gYour room is already fully paid up, Madam.\w" That's true, Ra...
 			endif[135]
 		endif[135]
-talk[39]::archives[8] = $82/130
+talk[39]::archives[8] = $81/129
 	withobj::[15]archives.employee
 		ifnot::[12]seencar
 			msg::[62]No need to do that now.
@@ -1095,7 +1095,7 @@ talk[39]::archives[8] = $82/130
 				set::[13]harbouridea
 			endif[135]
 		endif[135]
-talk[39]::emporium[9] = $83/131
+talk[39]::emporium[9] = $82/130
 	withobj::[34]emporium.clerk
 		if::[14]sheetfound
 			ifnot::[15]gotgumpaper
@@ -1110,7 +1110,7 @@ talk[39]::emporium[9] = $83/131
 				msg::[62]No need to do that now.
 			endif[135]
 		endif[135]
-talk[39]::palazzoducale[10] = $84/132
+talk[39]::palazzoducale[10] = $83/131
 	withobj::[35]palazzoducale.operator
 		ifnot::[7]telegramsent
 			if::[2]telegramread
@@ -1122,8 +1122,8 @@ talk[39]::palazzoducale[10] = $84/132
 		else[133]
 			msg::[62]No need to do that now.
 		endif[135]
-talk[39]::harbourauthority[21] = $85/133
-	withobj::[59]harbourauthority.officer
+talk[39]::harbourauthority[21] = $84/132
+	withobj::[49]harbourauthority.officer
 		if::[16]harbourideasaid
 			ifnot::[4]gotorderidea
 				msg::[110]Thinking fast, you say: "\gGood morning, sir, I am looking for t...
@@ -1138,17 +1138,17 @@ talk[39]::harbourauthority[21] = $85/133
 		else[133]
 			msg::[17]Find something to say, first...
 		endif[135]
+talk[39]::$everywhere[246] = $85/133
+	ifobjinattr[148]
+		ifis[142]
+			msg::[23]He simply ignores you
+		else[133]
+			msg::[120]To whom?
+		endif[135]
+	else[133]
+		msg::[129]Who?
+	endif[135]
 talk[39]::$everywhere[246] = $86/134
-	ifobjinattr[148]
-		ifis[142]
-			msg::[23]He simply ignores you
-		else[133]
-			msg::[120]To whom?
-		endif[135]
-	else[133]
-		msg::[129]Who?
-	endif[135]
-talk[39]::$everywhere[246] = $87/135
 	withobj::[249]$none
 		msg::[119]To whom, about what?
 	endwith[136]
@@ -1166,17 +1166,17 @@ talk[39]::$everywhere[246] = $87/135
 	withobj::[255]$unknown
 		msg::[78]Talk to whom?
 	endwith[136]
+ask[40]::$everywhere[246] = $85/133
+	ifobjinattr[148]
+		ifis[142]
+			msg::[23]He simply ignores you
+		else[133]
+			msg::[120]To whom?
+		endif[135]
+	else[133]
+		msg::[129]Who?
+	endif[135]
 ask[40]::$everywhere[246] = $86/134
-	ifobjinattr[148]
-		ifis[142]
-			msg::[23]He simply ignores you
-		else[133]
-			msg::[120]To whom?
-		endif[135]
-	else[133]
-		msg::[129]Who?
-	endif[135]
-ask[40]::$everywhere[246] = $87/135
 	withobj::[249]$none
 		msg::[119]To whom, about what?
 	endwith[136]
@@ -1194,21 +1194,21 @@ ask[40]::$everywhere[246] = $87/135
 	withobj::[255]$unknown
 		msg::[78]Talk to whom?
 	endwith[136]
-eat[45]::$everywhere[246] = $3b/59
+eat[45]::$everywhere[246] = $3a/58
 	msg::[62]No need to do that now.
-fill[46]::$everywhere[246] = $88/136
+fill[46]::$everywhere[246] = $87/135
 	msg::[72]Please feel free to continue, if you wish to... I've become immu...
-fuck[47]::$everywhere[246] = $88/136
+fuck[47]::$everywhere[246] = $87/135
 	msg::[72]Please feel free to continue, if you wish to... I've become immu...
-pet[50]::$everywhere[246] = $3b/59
+pet[50]::$everywhere[246] = $3a/58
 	msg::[62]No need to do that now.
-pick[51]::$everywhere[246] = $89/137
+pick[51]::$everywhere[246] = $88/136
 	msg::[166]You may try that, but it will probably not work.
-play[52]::$everywhere[246] = $89/137
+play[52]::$everywhere[246] = $88/136
 	msg::[166]You may try that, but it will probably not work.
-pray[53]::$everywhere[246] = $89/137
+pray[53]::$everywhere[246] = $88/136
 	msg::[166]You may try that, but it will probably not work.
-repair[54]::$everywhere[246] = $8a/138
+repair[54]::$everywhere[246] = $89/137
 	withobj::[4]sheet
 		ifisin[144]
 			ifisin[144]
@@ -1220,8 +1220,8 @@ repair[54]::$everywhere[246] = $8a/138
 			endif[135]
 		endif[135]
 	endwith[136]
-run[55]::piazzaacquaverde[11] = $8b/139
-	withobj::[42]piazzaacquaverde.twelve
+run[55]::piazzaacquaverde[11] = $8a/138
+	withobj::[40]piazzaacquaverde.twelve
 		if::[6]addressknown
 			ifnot::[9]stridein
 				set::[9]stridein
@@ -1230,23 +1230,23 @@ run[55]::piazzaacquaverde[11] = $8b/139
 				msg::[177]You thank him and exit the building. So... Rovelli is going to T...
 			endif[135]
 		endif[135]
-shibboleth[56]::$everywhere[246] = $70/112
+shibboleth[56]::$everywhere[246] = $6f/111
 	msg::[68]No. You aren't tired, now.
-sit[57]::$everywhere[246] = $70/112
+sit[57]::$everywhere[246] = $6f/111
 	msg::[68]No. You aren't tired, now.
-smell[58]::hallway[4] = $8c/140
+smell[58]::hallway[4] = $8b/139
 	msg::[106]There's a faint metallic odour mixed with the familiar smell of ...
-smell[58]::elevator[5] = $8d/141
+smell[58]::elevator[5] = $8c/140
 	msg::[21]From the smell only, you can't recognise if it's lubricating oil...
-smell[58]::piazzamanin[13] = $8e/142
+smell[58]::piazzamanin[13] = $8d/141
 	msg::[81]The air smells of iodine and salt, with a faint fishy undertone....
-smell[58]::portofranco[15] = $8f/143
+smell[58]::portofranco[15] = $8e/142
 	msg::[113]This place has an interesting smell that mixes salty air with ci...
-smell[58]::$everywhere[246] = $90/144
+smell[58]::$everywhere[246] = $8f/143
 	msg::[158]You don't smell anything in particular, apart from a barely perc...
-wash[61]::$everywhere[246] = $3b/59
+wash[61]::$everywhere[246] = $3a/58
 	msg::[62]No need to do that now.
-write[63]::$everywhere[246] = $91/145
+write[63]::$everywhere[246] = $90/144
 	ifisin[144]
 		ifisin[144]
 			msg::[181]You write an elegantly handwritten note on the stamped headed pa...
@@ -1260,28 +1260,28 @@ write[63]::$everywhere[246] = $91/145
 			msg::[183]You'd need something to write...
 		endif[135]
 	endif[135]
-xyzzy[64]::$everywhere[246] = $92/146
+xyzzy[64]::$everywhere[246] = $91/145
 	msg::[163]You have a strange sensation, almost as if you were becoming lig...
-make[65]::hotelroom[3] = $93/147
-	withobj::[17]hotelroom.bed
+make[65]::hotelroom[3] = $92/146
+	withobj::[24]hotelroom.bed
 		msg::[67]No. You are leaving your room. The sheets will be changed anyway...
-press[66]::elevator[5] = $94/148
-	withobj::[26]elevator.buttons
+press[66]::elevator[5] = $93/147
+	withobj::[29]elevator.buttons
 		goto::[6]hotelreception
-buy[67]::hotelreception[6] = $95/149
+buy[67]::hotelreception[6] = $94/148
 	msg::[77]Talk to the clerk.
-buy[67]::emporium[9] = $96/150
+buy[67]::emporium[9] = $95/149
 	msg::[79]Talk with the clerk to buy things.
-thank[68]::hotelreception[6] = $97/151
-	withobj::[28]hotelreception.clerk
+thank[68]::hotelreception[6] = $96/150
+	withobj::[31]hotelreception.clerk
 		msg::[2]"\gMy pleasure, Madam.\w"
-thank[68]::emporium[9] = $98/152
+thank[68]::emporium[9] = $97/151
 	withobj::[34]emporium.clerk
 		msg::[2]"\gMy pleasure, Madam.\w"
-thank[68]::palazzoducale[10] = $99/153
+thank[68]::palazzoducale[10] = $98/152
 	withobj::[35]palazzoducale.operator
 		msg::[2]"\gMy pleasure, Madam.\w"
-withobj:order[69]::archives[8] = $72/114
+withobj:order[69]::archives[8] = $71/113
 	withobj::[15]archives.employee
 		ifisin[144]
 			ifisin[144]
@@ -1296,7 +1296,7 @@ withobj:order[69]::archives[8] = $72/114
 			endif[135]
 		endif[135]
 	endwith[136]
-onfirst[240]::$everywhere[246] = $5c/92
+onfirst[240]::$everywhere[246] = $5b/91
 	withobj::[249]$none
 		msg::[186]\V what?
 	endwith[136]
@@ -1312,7 +1312,7 @@ onfirst[240]::$everywhere[246] = $5c/92
 	endwith[136]
 onfirst[241]::$everywhere[246] = $08/8
 	msg::[145]You can't go that way
-onfirst[242]::$everywhere[246] = $87/135
+onfirst[242]::$everywhere[246] = $86/134
 	withobj::[249]$none
 		msg::[119]To whom, about what?
 	endwith[136]
@@ -1330,5 +1330,5 @@ onfirst[242]::$everywhere[246] = $87/135
 	withobj::[255]$unknown
 		msg::[78]Talk to whom?
 	endwith[136]
-$unknown[255]::$everywhere[246] = $76/118
+$unknown[255]::$everywhere[246] = $75/117
 	msg::[125]What?

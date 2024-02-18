@@ -42,7 +42,7 @@ verb:knock
 verb:move
 	syn:move,lift
 verb:open
-	withobj:window
+	withobj:windows
 		msg:No need to do that now.
 verb:pet
 	msg:No need to do that now.
@@ -244,6 +244,22 @@ normalobj:order
 					msg:The employee writes the address on a card that he gives to you.
 					set:addressknown
 					put:card,$inventory
+obj:windows
+	syn:windows,window
+obj:burner
+	syn:burner,burners,chandelier,lamp,lamps
+obj:panels
+	syn:panels,walls,paneling,wood,wall,panel
+obj:dossiers
+	syn:dossiers,dossier
+obj:tram
+	syn:tram,rail,rails,railway,tramway
+obj:tree
+	syn:tree,park,trees
+obj:building
+	syn:building,buildings,palace,shops,shop,palaces,house,houses
+obj:statue
+	syn:statue,columbus,monument,christopher
 room:$start
 	image:png\start_C64.png
 	onfirst
@@ -317,12 +333,14 @@ room:hotelroom
 		verb:x
 			msg:You see Via Roma, in Genoa, outside.
 	scenery:tapestry
+		syn:tapestry,pattern,tapestries,patterns
 		verb:x
 			msg:Flowers and laurel leaves: decorative, indeed!
 	scenery:radiator
 		verb:x
 			msg:It's a modern cast-iron radiator, with thin feet and ornate geometric patterns. It's cool now, as it's summer.
 	scenery:washbowl
+		syn:washbowl,carafe,jug,pitcher
 		verb:use
 			msg:You already washed yourself and you are now wearing your clothes.
 		verb:x
@@ -364,6 +382,7 @@ room:elevator
 	verb:smell
 		msg:From the smell only, you can't recognise if it's lubricating oil or hydraulic fluid.
 	scenery:buttons
+		syn:buttons,button,plaque
 		verb:x
 			msg:Brassy!
 		verb:press
@@ -439,6 +458,7 @@ room:hotelreception
 		verb:x
 			msg:You see Via Roma, in Genoa, outside.
 	scenery:curtains
+		syn:curtains,taffetas
 		verb:x
 			msg:They're clean.
 	scenery:panels
@@ -570,6 +590,7 @@ room:palazzoducale
 		verb:thank
 			msg:"\gMy pleasure, Madam.\w"
 	scenery:receiver
+		syn:receiver,telegraph
 		verb:x
 			msg:The receiver writes dots and dashes on a long ribbon of paper.
 	scenery:key
@@ -681,12 +702,15 @@ room:portofranco
 	verb:smell
 		msg:This place has an interesting smell that mixes salty air with cinnamon, fish, coffee and chickpea bread (by the way, you tasted it when you first arrived in Genoa and you really loved it).
 	scenery:booths
+		syn:booths,booth
 		verb:x
 			msg:The booths sell fish and street food, as well as spices. You are not hungry, now.
 	scenery:store
+		syn:store,stores
 		verb:x
 			msg:They sell many things, rather uninteresting for you. However, you notice a small emporium to the south.
 	scenery:porch
+		syn:porch,sottoripa
 		verb:x
 			msg:For sure, it's a long porch!.
 room:viaassarotti

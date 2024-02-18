@@ -204,7 +204,7 @@ open
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-withobj:window
+withobj:windows
 3
 msg:No need to do that now.
 
@@ -835,6 +835,91 @@ ifobjin:archives.employee,$available
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+obj
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+windows
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:windows,window
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+burner
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:burner,burners,chandelier,lamp,lamps
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+panels
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:panels,walls,paneling,wood,wall,panel
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dossiers
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:dossiers,dossier
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tram
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:tram,rail,rails,railway,tramway
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tree
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:tree,park,trees
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+building
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:building,buildings,palace,shops,shop,palaces,house,houses
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+statue
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:statue,columbus,monument,christopher
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 room
 1
 <end node> 5P9i0s8y19Z
@@ -1065,6 +1150,11 @@ tapestry
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:tapestry,pattern,tapestries,patterns
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -1096,6 +1186,11 @@ dt=Text
 <node>
 washbowl
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:washbowl,carafe,jug,pitcher
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -1325,6 +1420,11 @@ buttons
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:buttons,button,plaque
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -1548,6 +1648,11 @@ dt=Text
 <node>
 curtains
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:curtains,taffetas
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -2075,6 +2180,11 @@ dt=Text
 <node>
 receiver
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:receiver,telegraph
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -2657,6 +2767,11 @@ booths
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:booths,booth
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -2674,6 +2789,11 @@ store
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+syn:store,stores
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 verb
 5
 <end node> 5P9i0s8y19Z
@@ -2688,6 +2808,11 @@ dt=Text
 <node>
 porch
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:porch,sottoripa
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
